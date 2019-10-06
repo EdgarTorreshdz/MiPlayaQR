@@ -20,7 +20,7 @@ window.onload = function() {
     long = startPos.coords.longitude;
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: lati, lng: long},
-    zoom: 8});
+    zoom: 15});
   };
   
 
