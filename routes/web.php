@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@welcome')->name('welcome');
+
 //Route::get('login','LoginController@showLoginForm')->name('login');
 Auth::routes();
 
@@ -24,3 +23,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('almacen/usuarios','UsuariosController');
+
+Route::get('/playas', 'PageController@playas')->name('playas');
