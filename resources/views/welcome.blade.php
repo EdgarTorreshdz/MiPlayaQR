@@ -7,9 +7,9 @@
 
 @endsection
     <script>
-var startPos;
-var lati;
-var long;
+STARTPOS = 0;
+LATI = 0;
+LONG = 0;
 window.onload = function() {
   
   var geoSuccess = function(position) {
@@ -18,19 +18,22 @@ window.onload = function() {
     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
     lati = startPos.coords.latitude;
     long = startPos.coords.longitude;
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: lati, lng: long},
+    zoom: 8});
   };
   
 
   navigator.geolocation.getCurrentPosition(geoSuccess);
 };
 
-        var map;
+        /*var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 21.1321181, lng: -86.8563852},
+                center: {lat: LATI, lng: LONG},
             zoom: 8
             });
-        }
+        }*/
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
     async defer></script>
