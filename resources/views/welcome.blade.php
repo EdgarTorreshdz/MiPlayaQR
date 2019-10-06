@@ -31,7 +31,6 @@
     @endforeach
 
 
-<<<<<<< HEAD
     <script>
         STARTPOS = 0;
         LATI = 0;
@@ -55,7 +54,7 @@
                 var markers = [
                   {
                     coords:{lat:lati,lng:long},
-                    content:'<h1>Amesbury MA</h1>'
+                    content:'<h1>TU ubicacion</h1>'
                     },
                     {
                     coords:{lat:21.131679,lng:-86.856411},
@@ -104,33 +103,6 @@
         
           navigator.geolocation.getCurrentPosition(geoSuccess);
         };
-=======
-@endsection
-
-
-    <script>
-
-STARTPOS = 0;
-LATI = 0;
-LONG = 0;
-window.onload = function() {
-  
-
-  var geoSuccess = function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-    lati = startPos.coords.latitude;
-    long = startPos.coords.longitude;
-    map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: lati, lng: long},
-    zoom: 20});
-  };
-  
-
-  navigator.geolocation.getCurrentPosition(geoSuccess);
-};
->>>>>>> 1.1 R
 
         /*var map;
         function initMap() {
