@@ -31,6 +31,7 @@
     @endforeach
 
 
+<<<<<<< HEAD
     <script>
         STARTPOS = 0;
         LATI = 0;
@@ -103,6 +104,33 @@
         
           navigator.geolocation.getCurrentPosition(geoSuccess);
         };
+=======
+@endsection
+
+
+    <script>
+
+STARTPOS = 0;
+LATI = 0;
+LONG = 0;
+window.onload = function() {
+  
+
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+    lati = startPos.coords.latitude;
+    long = startPos.coords.longitude;
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: lati, lng: long},
+    zoom: 20});
+  };
+  
+
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
+>>>>>>> 1.1 R
 
         /*var map;
         function initMap() {

@@ -18,7 +18,7 @@ class UsuariosController extends Controller
         if($request)
         {
             $query=trim($request->get('searchText'));
-            $usuarios=DB::table('usuarios')->where('nombre','LIKE','%'.$query.'%')->orderBy('iduser','desc')->paginate(10);
+            $usuarios=DB::table('usuarios')->where('nombre','LIKE','%'.$query.'%')->orderBy('id','desc');
             return view('almacen.usuarios.index',["usuarios"=>$usuarios,"searchText"=>$query]);
         }
 
