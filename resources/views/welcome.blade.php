@@ -4,7 +4,7 @@
     <div id="startLat"></div>
     <div id="startLon"></div>
     <div id="map"></div>
-
+ 
 @endsection
     <script>
 STARTPOS = 0;
