@@ -18,4 +18,13 @@ class PageController extends Controller
         $playas = App\Playa::all();
         return view('welcome',compact('playas'));
     }
+    public function editar($id){
+
+    }
+    public function eliminar($id){
+        $playasEliminar= App\Playa::findOrFail($id);
+        $playasEliminar->delete();
+        return back()->with('mensaje', 'Playa Eliminada');
+    }
+
 }
