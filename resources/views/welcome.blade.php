@@ -20,6 +20,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
     <link href="css/mapa.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="">
+    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    async defer></script>
 
 </head>
 <body>
@@ -75,49 +82,202 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+
+        
     </div>
-    <!--
+  
+    <div id="map" class="col-sm-12 col-md-12"></div>
     @foreach($playas as $recorrido)
       <input class="invisible" type="text" placeholder="{{$recorrido->nombre}}">
-      <input id="latid" class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
-      <input id="lonid" class="invisible" type="text" placeholder="{{$recorrido->longitud}}">
+      <input class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
     @endforeach
-    -->
-    <div id="map"></div>
-    <div class="busca">
-    <h1>Busca tu playa</h1>
-    </div>
-    <div id="sec" class="row">
-      <div class="col-8">col-8</div>
-      <div class="col-4">col-4</div>
-    </div>
-<div class="dropdown">
-  <button class="btn dropdown-toggle sr-only" type="button"
-          id="dropdownMenu1" data-toggle="dropdown">
-    Menú desplegable
-    <span class="caret"></span>
-  </button>
 
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Acción</a>
-    </li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
-    </li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
-    </li>
-    <li role="presentation" class="divider"></li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
-    </li>
-  </ul>
+
+   
+   <div class="row">
+   <div class="col sm 12 azul">
+   <h2 id="Encuentra">Encuentra tu playa:</h2>
+   </div>
+   </div>
+
+
+
+     <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+
+      <h3 class="col-sm-5"> La playa más limpia: 
+      </h3>
+
+
+        <select class="form-control form-control col-sm-5">
+            <option>Hoy</option>
+            <option>Ayer</option>
+            <option>Última semana</option>
+            <option>Último mes</option>
+        </select>
+
+
+      <h3 class="col-sm-6" id="izquierda">La playa más visitada:
+      </h3>
+
+
+      <select class="form-control form-control col-sm-5" id="izquierdaf">
+            <option>Hoy</option>
+            <option>Ayer</option>
+            <option>Última semana</option>
+            <option>Último mes</option>
+      </select>
+
+    </div>
+    <div class="container">
+
+    <br>
+    <br>
+
+<h3 class="col-sm-5"> La playa más limpia: 
+</h3>
+
+
+  <select class="form-control form-control col-sm-5">
+      <option>Hoy</option>
+      <option>Ayer</option>
+      <option>Última semana</option>
+      <option>Último mes</option>
+  </select>
+
+
+<h3 class="col-sm-6" id="izquierda">La playa más visitada:
+</h3>
+
+
+<select class="form-control form-control col-sm-5" id="izquierdaf">
+      <option>Hoy</option>
+      <option>Ayer</option>
+      <option>Última semana</option>
+      <option>Último mes</option>
+</select>
+
 </div>
-    <script>
+    <div class="container">
+    <div class="row"> 
+    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Enviar</a>
+    </div>
+    </div>
+  </section>
+
+
+   <!-- Image Showcases -->
+   <section class="showcase hueso">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/cancun-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Encuentra</h2>
+          <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt, fugiat at rerum laudantium perspiciatis! Voluptate earum excepturi placeat tempora?</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/cancun-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Reporta</h2>
+          <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magnam architecto blanditiis at? Quis quasi, delectus facilis velit provident impedit.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/cancun-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Disfruta</h2>
+          <p class="lead mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ipsa sapiente iste voluptas veritatis eum, ab voluptatem impedit error officiis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <div class="row">
+  <div class="azul col-sm-12">
+  <h2 style="margin-top:25px;">Creadores...</h2></div>
+  </div>
+
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br>
+  <br>
+  <br>  
+
+  <footer class="section footer-classic context-dark bg-image" style="background: #2176BD;">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4">
+                <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>798 South Park Avenue, Jaipur, Raj</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script>
         STARTPOS = 0;
         LATI = 0;
         LONG = 0;
@@ -230,7 +390,7 @@
         }*/
         
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
-    async defer></script>
+
+
 </body>
 </html>
