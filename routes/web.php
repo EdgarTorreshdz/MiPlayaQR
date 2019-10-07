@@ -1,11 +1,10 @@
 <?php
 
-
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PageController@welcome')->name('welcome');
-
 //Route::get('login','LoginController@showLoginForm')->name('login');
 Auth::routes();
 
@@ -15,6 +14,7 @@ Auth::routes();
 
 //pagina info
 Route::get('/info', 'informacionController@infos')->name('infos');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
