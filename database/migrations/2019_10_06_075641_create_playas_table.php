@@ -16,10 +16,9 @@ class CreatePlayasTable extends Migration
         Schema::create('playas', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('nombre',50);
-            $table->string('descripcion',1000);
             $table->string('imagen',200);
-            $table->float('latitud');
-            $table->float('longitud');
+            $table->double('latitud', 10,8);
+            $table->double('longitud', 10,8);
             $table->string('ubicacion',300);
             $table->timestamps();
         });
