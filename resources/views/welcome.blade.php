@@ -109,7 +109,7 @@
                 var markers = [
                   {
                     coords:{lat:lati,lng:long},
-                    content:'<h1>Amesbury MA</h1>'
+                    content:'<h1>TU ubicacion</h1>'
                     },
                     
                     {

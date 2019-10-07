@@ -22,6 +22,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('almacen/usuarios','UsuariosController');
-
 Route::get('/playas', 'PageController@playas')->name('playas');
