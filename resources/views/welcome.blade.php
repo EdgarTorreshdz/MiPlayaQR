@@ -80,7 +80,7 @@
         </main>
     </div>
     <?php 
-    echo json_encode($playas);
+    //echo json_encode($playas);
     //var_dump($playas);
     ?>
     @foreach($playas as $recorrido)

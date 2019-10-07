@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <?php var_dump($playa) ?>
+        <?php //var_dump($playa) ?>
 
         <style>
 
