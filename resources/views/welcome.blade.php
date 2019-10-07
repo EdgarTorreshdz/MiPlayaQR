@@ -111,7 +111,7 @@
         
         <div class="carousel-item">
         <img class="img-fluid d-block w-auto" src="{{$item->imagen}}" alt="{{$item->nombre}}">
-        <h4>Votos Positivos {{$item->}}</h4>
+        <h4>Votos Positivos</h4>
         </div>
         @endforeach
       
