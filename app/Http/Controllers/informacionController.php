@@ -11,4 +11,9 @@ class informacionController extends Controller
         $information = App\informacionPlayas::all();
         return view('info',compact('information'));
     }
+
+    public function slider(){
+        $information =App\playa::all();
+        return view('info',compact('information'));
+    }
 }

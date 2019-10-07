@@ -97,6 +97,20 @@
       <div class="col-8">col-8</div>
       <div class="col-4">col-4</div>
     </div>
+
+    <!-- 
+    Aqui comienzan los sliders
+    -->
+      
+    
+
+
+
+    <!-- 
+    Aqui terminan los sliders
+    -->
+    <h2>Hola</h2>
+
 <div class="dropdown">
   <button class="btn dropdown-toggle sr-only" type="button"
           id="dropdownMenu1" data-toggle="dropdown">
