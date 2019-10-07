@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class informacionPlayas extends Model
+class InformacionPlayas extends Model
 {
     //
+    protected $table='informacion_playas';
 }

@@ -79,13 +79,16 @@
             @yield('content')
         </main>
     </div>
-    <!--
+    <?php 
+    echo json_encode($playas);
+    //var_dump($playas);
+    ?>
     @foreach($playas as $recorrido)
       <input class="invisible" type="text" placeholder="{{$recorrido->nombre}}">
       <input id="latid" class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
       <input id="lonid" class="invisible" type="text" placeholder="{{$recorrido->longitud}}">
     @endforeach
-    -->
+    
     <div id="map"></div>
     <div class="busca">
     <h1>Busca tu playa</h1>
@@ -125,90 +128,51 @@
         window.onload = function() {
           
           var geoSuccess = function(position) {
-            startPos = position;
+            /*startPos = position;
             //document.getElementById('startLat').innerHTML = startPos.coords.latitude;
             //document.getElementById('startLon').innerHTML = startPos.coords.longitude;
             lati = startPos.coords.latitude;
-            long = startPos.coords.longitude;
+            long = startPos.coords.longitude;*/
             map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: lati, lng: long},
+            center: {lat: 18.494725, lng: -88.293657},
             zoom: 15});
                 google.maps.event.addListener(map, function(event){
                     // Add marker
                     addMarker({coords:event.latLng});
                 });
-                var markers = [
-                  {
-                    coords:{lat:lati,lng:long},
-                    content:'<h1>TU ubicacion</h1>'
-                    },
-                    
-                    {
-                    coords:{lat:21.137839,lng:-86.747870},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Caracol</h1>'
-                    },
-                    {
-                    coords:{lat:21.1405958,lng:-86.7764553},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Tortugas</h1>'
-                    },
-                    {
-                    coords:{lat:21.103459,lng:-86.763366},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Marlin</h1>'
-                    },
-                    {
-                    coords:{lat:21.060469,lng:-86.780001},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Delfines</h1>'
-                    },
-                    {
-                    coords:{lat:21.136752,lng:-86.754198},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Ancha</h1>'
-                    },
-                    {
-                    coords:{lat:21.14487,lng:-86.778171},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Casa Blanca</h1>'
-                    },
-                    {
-                    coords:{lat:21.145386,lng:-86.780159},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Langosta</h1>'
-                    },
-                    {
-                    coords:{lat:21.128785,lng: -86.748833},
-                    iconImage:'images/Palm.png',
-                    content:'<h1>Playa Chacmol</h1>'
-                    }
-                    
-                ];
+                var markers=<?php echo json_encode($playas);?>;
+
                 for(var i = 0;i < markers.length;i++){
         // Add marker
         addMarker(markers[i]);
       }
-
       // Add Marker Function
       function addMarker(props){
+        console.log(props);
+        //return;
         var marker = new google.maps.Marker({
-          position:props.coords,
+          position:{lat:props.latitud,lng:props.longitud},
           map:map,
+          icon:'images/Palm.png',
+          content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>'
           //icon:props.iconImage
         });
-
-        // Check for customicon
+        google.maps.event.addListener(marker, 'click', function() {
+          //alert(props.nombre);
+          window.location='/playas/'+props.id;
+        });
+        /*
+        
+        // Check for customicons
         if(props.iconImage){
           // Set icon image
           marker.setIcon(props.iconImage);
-        }
-
+        }*/
         // Check content
-        if(props.content){
+        if(props.nombre){
           var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
+            content:props.nombre
+          });infoWindow.open(map, marker);
 
           marker.addListener('click', function(){
             infoWindow.open(map, marker);
@@ -216,18 +180,11 @@
         }
       }
           };
-          
-        
-          navigator.geolocation.getCurrentPosition(geoSuccess);
+          //navigator.geolocation.getCurrentPosition(geoSuccess);
+          geoSuccess();
         };
 
-        /*var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: LATI, lng: LONG},
-            zoom: 8
-            });
-        }*/
+        /**/
         
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
