@@ -79,16 +79,6 @@
             @yield('content')
         </main>
     </div>
-    <?php 
-    //echo json_encode($playas);
-    //var_dump($playas);
-    ?>
-    @foreach($playas as $recorrido)
-      <input class="invisible" type="text" placeholder="{{$recorrido->nombre}}">
-      <input id="latid" class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
-      <input id="lonid" class="invisible" type="text" placeholder="{{$recorrido->longitud}}">
-    @endforeach
-    
     <div id="map"></div>
     <div class="busca">
     <h1>Busca tu playa</h1>
