@@ -144,43 +144,43 @@
                     },
                     
                     {
-                    coords:{lat:21.0604107,lng:-86.7818618},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    coords:{lat:21.137839,lng:-86.747870},
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Caracol</h1>'
                     },
                     {
                     coords:{lat:21.1405958,lng:-86.7764553},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Tortugas</h1>'
                     },
                     {
                     coords:{lat:21.103459,lng:-86.763366},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Marlin</h1>'
                     },
                     {
                     coords:{lat:21.060469,lng:-86.780001},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Delfines</h1>'
                     },
                     {
                     coords:{lat:21.136752,lng:-86.754198},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Ancha</h1>'
                     },
                     {
                     coords:{lat:21.14487,lng:-86.778171},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Casa Blanca</h1>'
                     },
                     {
                     coords:{lat:21.145386,lng:-86.780159},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Langosta</h1>'
                     },
                     {
-                    coords:{lat:21.1306255,lng:-86.7576362},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    coords:{lat:21.128785,lng: -86.748833},
+                    iconImage:'images/Palm.png',
                     content:'<h1>Playa Chacmol</h1>'
                     }
                     
