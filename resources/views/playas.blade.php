@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+@if (Auth::check())
 <h1>Playas - MiplayaQR</h1>
 @if(session('mensaje'))
   <div class="alert alert-success">
@@ -36,4 +37,7 @@
     @endforeach
   </tbody>
 </table>
+ @endif
+
+ <h1>Inicia Sesion Para Continuar</h1>
 @endsection
