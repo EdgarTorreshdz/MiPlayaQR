@@ -49,5 +49,4 @@ class PageController extends Controller
         $playasEliminar->delete();
         return back()->with('mensaje', 'Playa Eliminada');
     }
-
 }
