@@ -22,8 +22,63 @@
     <link href="css/mapa.css" rel="stylesheet">
 
 </head>
+<body>
+<div id="app">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                MyplayaQR
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
     <div id="map"></div>
     @foreach($playas as $recorrido)
       <input class="invisible" type="text" placeholder="{{$recorrido->nombre}}">
@@ -56,16 +111,46 @@
                     coords:{lat:lati,lng:long},
                     content:'<h1>TU ubicacion</h1>'
                     },
-                    {
-                    coords:{lat:21.131679,lng:-86.856411},
-                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                    content:'<h1>Lynn MA</h1>'
-                    },
                     
                     {
-                    coords:{lat:21.132219,lng:-86.855646},
+                    coords:{lat:21.0604107,lng:-86.7818618},
                     iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                    content:'<h1>Lynn MA</h1>'
+                    content:'<h1>Playa Caracol</h1>'
+                    },
+                    {
+                    coords:{lat:21.1405958,lng:-86.7764553},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Tortugas</h1>'
+                    },
+                    {
+                    coords:{lat:21.103459,lng:-86.763366},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Marlin</h1>'
+                    },
+                    {
+                    coords:{lat:21.060469,lng:-86.780001},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Delfines</h1>'
+                    },
+                    {
+                    coords:{lat:21.136752,lng:-86.754198},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Ancha</h1>'
+                    },
+                    {
+                    coords:{lat:21.14487,lng:-86.778171},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Casa Blanca</h1>'
+                    },
+                    {
+                    coords:{lat:21.145386,lng:-86.780159},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Langosta</h1>'
+                    },
+                    {
+                    coords:{lat:21.1306255,lng:-86.7576362},
+                    iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content:'<h1>Playa Chacmol</h1>'
                     }
                 ];
                 for(var i = 0;i < markers.length;i++){
@@ -115,3 +200,5 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
     async defer></script>
+</body>
+</html>
