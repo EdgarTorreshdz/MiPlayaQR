@@ -18,8 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
-    <link href="css/menu.css" rel="stylesheet">
-    <link href="css/mapa.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">

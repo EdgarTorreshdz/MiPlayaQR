@@ -79,13 +79,44 @@
             @yield('content')
         </main>
     </div>
-    <div id="map"></div>
+    <!--
     @foreach($playas as $recorrido)
       <input class="invisible" type="text" placeholder="{{$recorrido->nombre}}">
-      <input class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
+      <input id="latid" class="invisible" type="text" placeholder="{{$recorrido->latitud}}">
+      <input id="lonid" class="invisible" type="text" placeholder="{{$recorrido->longitud}}">
     @endforeach
+    -->
+    <div id="map"></div>
+    <div class="busca">
+    <h1>Busca tu playa</h1>
+    </div>
+    <div id="sec" class="row">
+      <div class="col-8">col-8</div>
+      <div class="col-4">col-4</div>
+    </div>
+<div class="dropdown">
+  <button class="btn dropdown-toggle sr-only" type="button"
+          id="dropdownMenu1" data-toggle="dropdown">
+    Menú desplegable
+    <span class="caret"></span>
+  </button>
 
-
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Acción</a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
+    </li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
+    </li>
+  </ul>
+</div>
     <script>
         STARTPOS = 0;
         LATI = 0;
@@ -102,7 +133,7 @@
             map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: lati, lng: long},
             zoom: 15});
-                google.maps.event.addListener(map, 'click', function(event){
+                google.maps.event.addListener(map, function(event){
                     // Add marker
                     addMarker({coords:event.latLng});
                 });
@@ -152,6 +183,7 @@
                     iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
                     content:'<h1>Playa Chacmol</h1>'
                     }
+                    
                 ];
                 for(var i = 0;i < markers.length;i++){
         // Add marker
