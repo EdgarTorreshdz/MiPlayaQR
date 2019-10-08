@@ -12,9 +12,6 @@
             <span class="icon-cog"></span>
         </div>
         <div class="sub-menu_3">
-<<<<<<< HEAD
-            <a href="" ><span class="icon-exit"></span></a>
-=======
               <a class="icon-exit"
                   onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
@@ -23,36 +20,34 @@
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
                   </form>
->>>>>>> 720850006cc3ab4cba7f80c15691ce0ed49e0626
         </div>
     </div>
 
     <div class="menu-lateral">
         <div class="avatar">
             <a href="/"><img class="img-avatar" src="./images/2076984.png" alt="Avatar"></a>
-            <p>Bienvenido</p>
-            <p>Usuario</p>
+
         </div>
         <nav>
         <li>
-            <span class="icon-home"></span>
+        <a href="/usuarios"><span class="icon-home"></span>
             <br>
-            <a href="/usuarios">Usuarios</a>
+            Usuarios</a>
         </li>
             <li>
-                <span class="icon-home"></span>
+            <a href="/admin"><span class="icon-home"></span>
                 <br>
-                <a href="/admin">Home</a>
+                Home</a>
+            </li>u
+            <li>
+            <a href="/lista"><span class="icon-leaf"></span>
+                <br>
+                Playas</a>
             </li>
             <li>
-                <span class="icon-leaf"></span>
+            <a href="votos"><span class="icon-file-text"></span>
                 <br>
-                <a href="/lista">Playas</a>
-            </li>
-            <li>
-                <span class="icon-file-text"></span>
-                <br>
-                <a href="votos">Encuestas</a>
+                Encuestas</a>
             </li>
         </nav>
     </div>
