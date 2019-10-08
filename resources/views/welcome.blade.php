@@ -27,10 +27,19 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <nav class="navbar navbar-expand-md shadow-sm" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 MyplayaQR
@@ -80,20 +89,20 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
     <div id="map"></div>
-    
-
- 
- <div class="row">
- <div class="col sm 12 azul">
- <h2 id="Encuentra">Encuentra tu playa:</h2>
- </div>
- </div>
+<div class="site-section bg-light" id="services-section">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <div class="block-heading-1">
+                <h2>¡Encuentra tu playa!</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
 
 
 
@@ -134,89 +143,162 @@
 </div>
   <div class="container">
   <div class="row"> 
-  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Enviar</a>
+  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Buscar</a>
   </div>
-  </div>
-</section>
-
-
- <!-- Image Showcases -->
- <section class="showcase hueso">
-  <div class="container-fluid p-0">
-    <div class="row no-gutters">
-
-      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/cancun-3.jpg');"></div>
-      <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-        <h2>Encuentra</h2>
-        <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt, fugiat at rerum laudantium perspiciatis! Voluptate earum excepturi placeat tempora?</p>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/cancun-2.jpg');"></div>
-      <div class="col-lg-6 my-auto showcase-text">
-        <h2>Reporta</h2>
-        <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magnam architecto blanditiis at? Quis quasi, delectus facilis velit provident impedit.</p>
-      </div>
-    </div>
-    <div class="row no-gutters">
-      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/cancun-1.jpg');"></div>
-      <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-        <h2>Disfruta</h2>
-        <p class="lead mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ipsa sapiente iste voluptas veritatis eum, ab voluptatem impedit error officiis.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<div class="row">
-<div class="azul col-sm-12">
-<h2 style="margin-top:25px;">Creadores...</h2></div>
-</div>
-
-
-<!-- Testimonials -->
-<section class="testimonials text-center bg-light">
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-          <h5>Margaret E.</h5>
-          <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-          <h5>Fred S.</h5>
-          <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-          <h5>Sarah W.</h5>
-          <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-          <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-          <h5>Sarah W.</h5>
-          <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-        </div>
-    </div>
-  </div>
-</section>
-
-
+  <br>
 <br>
-<br>
-<br>  
+  </div>
+</section>
 
-@extends('layouts.footer')
 
+
+    <section id="subscribe">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="subscribe-title">Únete a nosotros y ayuda al planeta.</h3>
+          <p class="subscribe-text">Un mundo  mejor es nuestro límite y no desansaremos hasta ver avances.</p>
+        </div>
+        <div class="col-md-4 subscribe-btn-container">
+          <a class="subscribe-btn" href="{{ route('register') }}">Registrate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      <div class="block__73694 site-section border-top" id="why-us-section">
+        <div class="container">
+          <div class="row d-flex no-gutters align-items-stretch">
+
+            <div class="col-12 col-lg-6 block__73422 order-lg-2" style="background-image: url('images/depot_delivery_1.jpg');" data-aos="fade-left" data-aos-delay="">
+            </div>
+
+
+
+            <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
+              <h2 class="mb-4 text-black">Why Depot</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam error aliquid, dolores animi obcaecati quisquam accusamus soluta?</p>
+
+              <ul class="ul-check primary list-unstyled mt-5">
+                <li>Cargo express</li>
+                <li>Secure Services</li>
+                <li>Secure Warehouseing</li>
+                <li>Cost savings</li>
+                <li>Proven by great companies</li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section" id="team-section">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
+                <h2>Our Staff</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="owl-carousel owl-all mb-5">
+            <div class="block-team-member-1 text-center rounded h-100">
+              <figure>
+                <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Max Carlson</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+
+            <div class="block-team-member-1 text-center rounded h-100">
+              <figure>
+                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Charlotte Pilat</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+
+            <div class="block-team-member-1 text-center rounded h-100">
+              <figure>
+                <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Nicole Lewis</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+
+            </div>
+
+            
+
+
+        </div>
+      </div>
+
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-7">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptate debitis voluptatum et dolorum.</p>
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Features</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+
+            <div class="mb-5">
+              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
+              <form action="#" method="post" class="footer-suscribe-form">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+                </div>
+            </div>
+
+
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+   
 <script>
         STARTPOS = 0;
         LATI = 0;
@@ -284,7 +366,20 @@
         /**/
         
     </script>
+    <script>$('.carousel').carousel()</script>
     <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
     async defer></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
