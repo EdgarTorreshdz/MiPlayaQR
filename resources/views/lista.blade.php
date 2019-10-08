@@ -23,7 +23,7 @@
     <form action="{{route('playas.crear')}}" method="POST">
       @csrf
       <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
-      <input type="text" name="descripcion" placeholder="Descripcion" class="form-control mb-2">
+      <input type="text" name="ubicacion" placeholder="Descripcion" class="form-control mb-2">
       <input type="number" name="latitud" placeholder="Latitud" class="form-control mb-2">
       <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
       <input type="number" name="longitud" placeholder="Longitud" class="form-control mb-2">
