@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -411,3 +413,5 @@ $("#ubicacion").css("display", "none");
     <script src="js/main.js"></script>
 </body>
 </html>
+
+

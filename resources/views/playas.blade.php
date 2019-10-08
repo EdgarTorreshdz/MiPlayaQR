@@ -1,7 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <div class="contenedor-1">
-    <h1>playas - MiplayaQR</h1>
+@if (Auth::check())
+<h1>Playas - MiplayaQR</h1>
+@if(session('mensaje'))
+  <div class="alert alert-success">
+    {{session('mensaje') }}
+  </div>
+  
+@endif
+
+<form action="" method="post">
+
+  <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
+  <input type="text" name="descripcion" placeholder="Descripcion" class="form-control mb-2">
+  <button class="btn btn-primary btn-block" type="submit">Agregar</button>
+</form>
+
 
 <table class="table">
   <thead>
@@ -21,7 +35,7 @@
     @endforeach
   </tbody>
 </table>
-        </div>
-    </div>
+ @endif
 
+ <h1>Inicia Sesion Para Continuar</h1>
 @endsection
