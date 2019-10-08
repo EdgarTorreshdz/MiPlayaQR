@@ -68,6 +68,16 @@
                             @endif
                             
                         @else
+                        @if(Auth::user()->permiso==1)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin') }}">{{ __('Panel') }}</a>
+                            </li>
+                            @endif
+                            @if(Auth::user()->permiso==2)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('/playas') }}">{{ __('Playas') }}</a>
+                            </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -85,6 +95,7 @@
                                     </form>
                                 </div>
                             </li>
+                            
                         @endguest
                     </ul>
                 </div>

@@ -72,6 +72,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
                             </li>
+                            @if(Auth::user()->permiso==1)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin') }}">{{ __('Panel') }}</a>
+                            </li>
+                            @endif
                             
                         @endguest
                     </ul>
