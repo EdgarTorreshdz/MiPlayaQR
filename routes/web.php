@@ -25,3 +25,4 @@ Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
 //Pagina playa
 Route::put('/editar/{id}', 'PageController@editar' )->name('playas.editar');
 Route::delete('eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
+
