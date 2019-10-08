@@ -85,12 +85,6 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('usuarios') }}">{{ __('Usuarios') }}</a>
-                            </li>
                         @endguest
                     </ul>
                 </div>

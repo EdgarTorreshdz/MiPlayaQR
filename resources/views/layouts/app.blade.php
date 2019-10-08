@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/logo.png" alt="" style="height: 150px;">
+                <img src="images/logo.png" alt="" style="height: 80px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -68,12 +68,11 @@
                                     </form>
                                 </div>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('usuarios') }}">{{ __('Usuarios') }}</a>
-                            </li>
+                            
                         @endguest
                     </ul>
                 </div>

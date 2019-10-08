@@ -2,43 +2,29 @@
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-
-
-//rutas accesibles si el usuario no esta logueado.
-
-Route::get('/', 'PageController@welcome')->name('welcome');
-
-Route::get('/playas/{playa}', 'PageController@show')->name('playas.show');
-
-route::group(['middleware'=>'usuarioAdmin'],function(){
-    Route::delete('eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
-    Route::get('/playas', 'PageController@playas')->name('playas');
-    Route::put('/editar/{id}', 'PageController@editar' )->name('playas.editar');
-});
-route::group(['middleware'=>'usuarioStandard'],function(){
+//Rutas de usuario standard
+route::group(['middleware'=>'usuarioStandard'],function()     {
     //Route::get('login','LoginController@showLoginForm')->name('login');
     Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
-
+    Route::get('/playas', 'PageController@playas')->name('playas');
+    Route::get('/playas/{playa}', 'PageController@show')->name('playas.show');
 
 });
-Route::get('/usuarios', 'PageController@Usuarios')->name('usuarios');
-
+Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-
-//pagina info
-Route::get('/info', 'informacionController@infos')->name('infos');
-Route::get('/home', 'HomeController@index')->name('home');
-
-
 Route::get('/denied', ['as' => 'denied', function() {
-    return view('welcome');
+    return view('admin');
 }]);
+Route::get('/', 'PageController@welcome')->name('welcome');
+
 Route::get('/denegado', ['as' => 'denegado', function() {
     return view('welcome');
 }]);
-//Pagina playa
-
+//Rutas de Administrador
+route::group(['middleware'=>'usuarioAdmin'],function(){
+    Route::get('/admin', 'PageController@admin')->name('admin');
+    Route::get('/lista','PageController@listaPlaya')->name('lista');
+    Route::get('/usuarios', 'PageController@Usuarios')->name('usuarios');
+    Route::get('/votos','informacionController@infos')->name('votos');
+});

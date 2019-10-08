@@ -15,6 +15,7 @@ class MDusuarioadmin
      */
     public function handle($request, Closure $next)
     {
+        if(\Auth::check()){
         
         $usuario_actual=\Auth::user();
         if($usuario_actual->permiso!=1){
@@ -22,6 +23,10 @@ class MDusuarioadmin
          //return view("welcome")->with("msj","No tiene suficientes Privilegios para acceder a esta seccion");
         }
         return $next($request);
-    
+    }
+    else{
+        return redirect()->route('login');
+
+    }
     }
 }

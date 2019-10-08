@@ -35,11 +35,17 @@ class PageController extends Controller
         }
         $playas->save();
     }
-
+    
     public function usuarios(){
         $usuarios = App\User::all();
         return view('usuarios',compact('usuarios'));
     }
+
+    public function admin(){
+        //$usuarios = App\User::all();
+        return view('admin');
+    }
+
     public function welcome(){
         $playas = App\Playa::all();
         return view('welcome',compact('playas'));
@@ -51,5 +57,9 @@ class PageController extends Controller
         $playasEliminar= App\Playa::findOrFail($id);
         $playasEliminar->delete();
         return back()->with('mensaje', 'Playa Eliminada');
+    }
+    public function listaPlaya(){
+        $playas = App\Playa::all();
+        return view('lista',compact('playas'));
     }
 }

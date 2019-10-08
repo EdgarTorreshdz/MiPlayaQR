@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,27 +11,26 @@
     <title>HEY</title>
 </head>
 <body>
+
 @extends('layouts.menu')
 @section('content')
     <div class="contenedor-1">
     <h1>Usuarios - MiplayaQR</h1>
 
-<table class="table">
+    <table class="table">
   <thead>
     <tr>
       <th scope="col">#id</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Correo</th>
-      <th scope="col">permiso</th>
+      <th scope="col">Estado</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($usuarios as $recorrido)
+    @foreach($playas as $recorrido)
     <tr>
       <th scope="row">{{$recorrido->id}}</th>
-      <td>{{$recorrido->name}}</td>
-      <td>{{$recorrido->email}}</td>
-      <td>{{$recorrido->permiso}}</td>
+      <td>{{$recorrido->nombre}}</td>
+      <td>{{$recorrido->ubicacion}}</td>
     </tr>
     @endforeach
   </tbody>
