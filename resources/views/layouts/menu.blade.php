@@ -12,7 +12,18 @@
             <span class="icon-cog"></span>
         </div>
         <div class="sub-menu_3">
+<<<<<<< HEAD
             <a href="" ><span class="icon-exit"></span></a>
+=======
+              <a class="icon-exit"
+                  onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                  </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+>>>>>>> 720850006cc3ab4cba7f80c15691ce0ed49e0626
         </div>
     </div>
 

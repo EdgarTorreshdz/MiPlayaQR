@@ -9,8 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-<?php include("../resources/views/layouts/menu.blade.php"); ?>
-
+@extends('layouts.menu')
+@section('content')
     <div class="contenedor-1">
         <p>Resumen de Playas</p>
         <div class="sub-cont">
@@ -47,3 +47,4 @@
 
 </body>
 </html>
+@endsection
