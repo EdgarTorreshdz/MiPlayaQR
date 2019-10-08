@@ -385,7 +385,7 @@ $("#ubicacion").css("display", "none");
         
     </script>
     <script>$('.carousel').carousel()</script>
-    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqLUn1LcX7EQVldV2uheSxnoeQjHyWNM&callback=initMap"
     async defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
