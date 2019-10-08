@@ -39,7 +39,7 @@
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md shadow-sm" id="nav">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 MyplayaQR
@@ -89,8 +89,13 @@
                 </div>
             </div>
         </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
     <div id="map"></div>
+    <button id="ubicacion" class="btn btn-primary">Obtener ubicación</button>
 <div class="site-section bg-light" id="services-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
@@ -300,6 +305,17 @@
 
    
 <script>
+function localizacion(position){
+  map.setCenter({lat: position.coords.latitude, lng: position.coords.longitude});
+  var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    icon:'images/gps.png',
+    content:'<h4>Tu ubicación</h4>'
+});
+marker.setMap(map);
+$("#ubicacion").css("display", "none");
+}
         STARTPOS = 0;
         LATI = 0;
         LONG = 0;
@@ -324,6 +340,7 @@
                 for(var i = 0;i < markers.length;i++){
         // Add marker
         addMarker(markers[i]);
+        
       }
       // Add Marker Function
       function addMarker(props){
@@ -333,21 +350,14 @@
           position:{lat:props.latitud,lng:props.longitud},
           map:map,
           icon:'images/Palm.png',
-          content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>'
+          content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>',
           //icon:props.iconImage
         });
         google.maps.event.addListener(marker, 'click', function() {
           //alert(props.nombre);
           window.location='/playas/'+props.id;
         });
-        /*
-        
-        // Check for customicons
-        if(props.iconImage){
-          // Set icon image
-          marker.setIcon(props.iconImage);
-        }*/
-        // Check content
+
         if(props.nombre){
           var infoWindow = new google.maps.InfoWindow({
             content:props.nombre
@@ -355,12 +365,20 @@
 
           marker.addListener('click', function(){
             infoWindow.open(map, marker);
+            
           });
+          
+
         }
+        //geoSuccess();
       }
           };
           //navigator.geolocation.getCurrentPosition(geoSuccess);
           geoSuccess();
+          $("#ubicacion").click(function(){
+
+            navigator.geolocation.getCurrentPosition(localizacion);
+          });
         };
 
         /**/
@@ -371,7 +389,6 @@
     async defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
@@ -379,7 +396,6 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/aos.js"></script>
-
     <script src="js/main.js"></script>
 </body>
 </html>
