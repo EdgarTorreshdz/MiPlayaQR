@@ -36,7 +36,10 @@ class PageController extends Controller
         $playas->save();
     }
 
-
+    public function usuarios(){
+        $usuarios = App\User::all();
+        return view('usuarios',compact('usuarios'));
+    }
     public function welcome(){
         $playas = App\Playa::all();
         return view('welcome',compact('playas'));

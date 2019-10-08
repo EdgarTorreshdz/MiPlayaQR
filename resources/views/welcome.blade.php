@@ -66,6 +66,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -84,6 +85,12 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('usuarios') }}">{{ __('Usuarios') }}</a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -95,7 +102,7 @@
         </main>
     </div>
     <div id="map"></div>
-    <button id="ubicacion" class="btn btn-primary">Obtener ubicación</button>
+    <button id="ubicacion" style="margin-left: 45%; margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
 <div class="site-section bg-light" id="services-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
@@ -335,7 +342,7 @@ $("#ubicacion").css("display", "none");
                     // Add marker
                     addMarker({coords:event.latLng});
                 });
-                var markers=<?php echo json_encode($playas);?>;
+                var markers=<?php echo json_encode($playas ?? '');?>;
 
                 for(var i = 0;i < markers.length;i++){
         // Add marker

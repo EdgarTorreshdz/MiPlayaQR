@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="images/logo.png" alt="" style="height: 150px;">
@@ -67,12 +67,6 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('usuarios') }}">{{ __('Usuarios') }}</a>
                             </li>
                         @endguest
                     </ul>
