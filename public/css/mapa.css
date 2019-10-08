@@ -2,9 +2,7 @@
     width: 50%;
 }
 #map {
-    width: 100%;
-    height: 80%;
-    
+    height: 70%;
   }
   /* Optional: Makes the sample page fill the window. */
   html, body {
@@ -12,18 +10,3 @@
     margin: 0;
     padding: 0;
   }
-  .busca{
-    width: 100%;
-    height: 100px;
-    background: #68b2e8;
-  }
- 
-  h1{
-    padding-top: 30px;
-    text-align: center;
-  }
-  #sec{
-    margin-top: 20px;
-    height: 200px;
-  }
-  

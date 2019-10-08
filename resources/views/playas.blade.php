@@ -22,8 +22,7 @@
     <tr>
       <th scope="col">#id</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Descripcion</th>
-      <th scope="col">imagen</th>
+      <th scope="col">Estado</th>
     </tr>
   </thead>
   <tbody>
@@ -31,8 +30,7 @@
     <tr>
       <th scope="row">{{$recorrido->id}}</th>
       <td>{{$recorrido->nombre}}</td>
-      <td>{{$recorrido->descripcion}}</td>
-      <td>{{$recorrido->imagen}}</td>
+      <td>{{$recorrido->ubicacion}}</td>
     </tr>
     @endforeach
   </tbody>

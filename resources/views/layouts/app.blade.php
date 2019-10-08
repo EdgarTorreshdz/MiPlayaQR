@@ -22,10 +22,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
+            <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
-                MyplayaQR
+                <img src="images/logo.png" alt="" style="height: 80px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,6 +49,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -67,6 +68,11 @@
                                     </form>
                                 </div>
                             </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
+                            </li>
+                            
                         @endguest
                     </ul>
                 </div>

@@ -20,7 +20,7 @@ class CreateInformacionPlayasTable extends Migration
             $table->integer('votosnegativos');
             $table->timestamps();
         });
-    }
+    }   
 
     /**
      * Reverse the migrations.
