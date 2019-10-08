@@ -20,7 +20,10 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check()) {
             return redirect('/home');
         }
-
+        if($usuario_actual->permiso!=1){
+            return redirect()->route('denegado');
+         //return view("welcome")->with("msj","No tiene suficientes Privilegios para acceder a esta seccion");
+        }
         return $next($request);
     }
 }
