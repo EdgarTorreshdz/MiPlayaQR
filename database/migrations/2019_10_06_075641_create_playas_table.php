@@ -18,7 +18,7 @@ class CreatePlayasTable extends Migration
             $table->Increments('id');
             $table->string('nombre',50);
             $table->string('imagen',200)->nullable();
-            $table->double('latitud', 10,8,);
+            $table->double('latitud', 10,8);
             $table->double('longitud', 10,8);
             $table->string('ubicacion',300);
             $table->timestamps();
