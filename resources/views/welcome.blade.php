@@ -362,7 +362,7 @@ $("#ubicacion").css("display", "none");
         var marker = new google.maps.Marker({
           position:{lat:props.latitud,lng:props.longitud},
           map:map,
-          icon:'images/Palm.png',
+          icon:'images/palm.png',
           content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>',
           //icon:props.iconImage
         });
