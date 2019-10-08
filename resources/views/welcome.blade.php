@@ -41,10 +41,10 @@
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                MyplayaQR
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="images/logo.png" alt="" style="height: 80px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -102,10 +102,6 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
     <div id="map"></div>
     <button id="ubicacion" style="margin-left: 45%; margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
@@ -282,16 +278,7 @@
           </div>
           <div class="col-md-4 ml-auto">
 
-            <div class="mb-5">
-              <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
-              <form action="#" method="post" class="footer-suscribe-form">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>
-                  </div>
-                </div>
-            </div>
+           
 
 
             <h2 class="footer-heading mb-4">Follow Us</h2>

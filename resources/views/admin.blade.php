@@ -41,10 +41,6 @@
         </div>
     </div>
 
-    <div class="contenedor-2">
-        Hola Mundo
-    </div>
-
 </body>
 </html>
 @endsection

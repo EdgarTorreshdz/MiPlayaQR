@@ -1,7 +1,5 @@
 <div class="menu-superior">
-        <div class="sub-menu_1">
-            <img class="logo" src="./images/Logo.png" alt="Logo">
-        </div>
+
         <div class="sub-menu_2">
             
         </div>
@@ -38,7 +36,7 @@
             <a href="/admin"><span class="icon-home"></span>
                 <br>
                 Home</a>
-            </li>u
+            </li>
             <li>
             <a href="/lista"><span class="icon-leaf"></span>
                 <br>

@@ -6,13 +6,14 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
+                
 
                 <div class="card-body">
                     @if (session('status'))
-                        returtn view('welcome');
+                        return view('welcome');
                     @endif
 
-                    You are logged in!
+                    Bienvenido
                 </div>
             </div>
         </div>
