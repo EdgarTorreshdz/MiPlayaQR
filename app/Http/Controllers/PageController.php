@@ -50,8 +50,25 @@ class PageController extends Controller
         $playas = App\Playa::all();
         return view('welcome',compact('playas'));
     }
-    public function editar($id){
 
+    public function crear(Request $request){
+        
+        $playaNueva= new App\Playa;
+        $playaNueva->nombre = $request->nombre;
+        $playaNueva->imagen=$request->imagen;
+        $playaNueva->latitud=$request->latitud;
+        $playaNueva->longitud=$request->longitud;
+        $playaNueva->ubicacion = $request->ubicacion;
+        $playaNueva->save();
+        return back()->with('mensaje','Playa Creada');
+
+        //return $request->all();
+    }
+
+    public function editar(Request $request, $id){
+        $playasEditar = App\Playa::findOrFail($id);
+        $playasEditar->save();
+        return back()->with('mensaje','Playa editada');
     }
     public function eliminar($id){
         $playasEliminar= App\Playa::findOrFail($id);
@@ -61,5 +78,6 @@ class PageController extends Controller
     public function listaPlaya(){
         $playas = App\Playa::all();
         return view('lista',compact('playas'));
+
     }
 }

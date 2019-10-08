@@ -14,15 +14,31 @@
 
 @extends('layouts.menu')
 @section('content')
+
+
     <div class="contenedor-1">
     <h1>Usuarios - MiplayaQR</h1>
 
+
+    <form action="{{route('playas.crear')}}" method="POST">
+      @csrf
+      <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
+      <input type="text" name="descripcion" placeholder="Descripcion" class="form-control mb-2">
+      <input type="number" name="latitud" placeholder="Latitud" class="form-control mb-2">
+      <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
+      <input type="number" name="longitud" placeholder="Longitud" class="form-control mb-2">
+      
+      <button class="btn btn-primary btn-block" type="submit">Agregar</button>
+    </form>
+    
+    
     <table class="table">
   <thead>
     <tr>
       <th scope="col">#id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Estado</th>
+      <th scope="col"> acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +47,7 @@
       <th scope="row">{{$recorrido->id}}</th>
       <td>{{$recorrido->nombre}}</td>
       <td>{{$recorrido->ubicacion}}</td>
+      <td>Acciones</td>
     </tr>
     @endforeach
   </tbody>

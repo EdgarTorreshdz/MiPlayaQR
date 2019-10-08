@@ -12,7 +12,7 @@
             <span class="icon-cog"></span>
         </div>
         <div class="sub-menu_3">
-            <a href="session_destroy();" ><span class="icon-exit"></span></a>
+            <a href="" ><span class="icon-exit"></span></a>
         </div>
     </div>
 

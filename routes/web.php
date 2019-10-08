@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 //Rutas de usuario standard
@@ -28,3 +29,5 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
     Route::get('/usuarios', 'PageController@Usuarios')->name('usuarios');
     Route::get('/votos','informacionController@infos')->name('votos');
 });
+
+Route::post('/', 'PageController@crear')->name('playas.crear');
