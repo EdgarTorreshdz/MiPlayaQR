@@ -1,0 +1,12 @@
+
+#carta{
+    max-width: 50%;
+    float: center;
+    margin: 20px;
+    background: #CAC8C8;
+    margin-left: 25%;
+}
+h1{
+    text-align: center;
+    color: black;
+}

@@ -1,41 +1,16 @@
 @extends('layouts.app')
 @section('content')
-@if (Auth::check())
 <h1>Playas - MiplayaQR</h1>
-@if(session('mensaje'))
-  <div class="alert alert-success">
-    {{session('mensaje') }}
+
+<div clas="caja">
+@foreach($playas as $recorrido)
+  <div id="carta" class="card mb-3">
+    <a href="/playas/{{$recorrido->id}}"><img class="card-img-top" src="images/delfines.jpg" alt=""></a>
+    <div class="card-body">
+      <h5 class="card-title">Playa:  {{$recorrido->nombre}}</h5>
+      <p class="card-text">Ubicación {{$recorrido->ubicacion}}</p>
+    </div>
   </div>
-  
-@endif
-
-<form action="{{route('playas.crear')}}" method="POST">
-  @csrf
-  <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
-  <input type="text" name="ubicacion" placeholder="Estado" class="form-control mb-2">
-  <button class="btn btn-primary btn-block" type="submit">Agregar</button>
-</form>
-
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#id</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Estado</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($playas as $recorrido)
-    <tr>
-      <th scope="row">{{$recorrido->id}}</th>
-      <td>{{$recorrido->nombre}}</td>
-      <td>{{$recorrido->ubicacion}}</td>
-    </tr>
     @endforeach
-  </tbody>
-</table>
- @endif
-
- <h1>Inicia Sesion Para Continuar</h1>
+  </div>
 @endsection
