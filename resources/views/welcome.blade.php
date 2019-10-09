@@ -118,16 +118,6 @@
 <section class="features-icons bg-light text-center">
   <div class="container">
 
-    <h3 class="col-sm-5"> La playa más cercana: 
-    </h3>
-
-
-      <select class="form-control form-control col-sm-5">
-          <option>Hoy</option>
-          <option>Ayer</option>
-          <option>Última semana</option>
-          <option>Último mes</option>
-      </select>
 
 
     <h3 class="col-sm-6" id="izquierda">La playa más limpia:
@@ -154,7 +144,7 @@
   <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Buscar</a>
   </div>
   <br>
-<br>
+<br>  
   </div>
 </section>
 
@@ -311,7 +301,7 @@ $("#ubicacion").css("display", "none");
         var marker = new google.maps.Marker({
           position:{lat:props.latitud,lng:props.longitud},
           map:map,
-          icon:'images/palm.png',
+          icon:'images/palmera.png',
           content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>',
           //icon:props.iconImage
         });

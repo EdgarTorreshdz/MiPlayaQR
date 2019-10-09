@@ -72,16 +72,50 @@ class PageController extends Controller
         //return $request->all();
     }
 
-    public function editar(Request $request, $id){
+    /*public function editar(Request $request, $id){
         $playasEditar = App\Playa::findOrFail($id);
         $playasEditar->save();
         return back()->with('mensaje','Playa editada');
+    }*/
+    /*public function eliminar($id){
+        $playasEliminar= App\Playa::findOrFail($id);
+        $playasEliminar->delete();
+        return back()->with('mensaje', 'Playa Eliminada');
+    }*/
+    /*public function crear(Request $request){
+        
+        $request->validate([
+            'nombre'=>'required|max:40',
+            'latitud'=>'required|max:10',
+            'longitud'=>'required|max:10',
+            'ubicacion'=>'required|max:40',
+
+        ]);
+
+        $playaNueva= new App\Playa;
+        $playaNueva->nombre = $request->nombre;
+        $playaNueva->imagen=$request->imagen;
+        $playaNueva->latitud=$request->latitud;
+        $playaNueva->longitud=$request->longitud;
+        $playaNueva->ubicacion = $request->ubicacion;
+        $playaNueva->save();
+        return back()->with('mensaje','Playa Creada');
+
+        //return $request->all();
+    }*/
+
+    public function editar($id){
+        $playasEditar = App\Playa::findOrFail($id);
+        return view('editar',compact('playasEditar'));
+
     }
     public function eliminar($id){
         $playasEliminar= App\Playa::findOrFail($id);
         $playasEliminar->delete();
         return back()->with('mensaje', 'Playa Eliminada');
     }
+
+
     public function listaPlaya(){
         $playas = App\Playa::all();
         return view('lista',compact('playas'));

@@ -32,3 +32,6 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
 });
 
 Route::post('/', 'PageController@crear')->name('playas.crear');
+Route::post('/', 'PageController@crear')->name('playas.crear');
+Route::delete('/eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
+Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
