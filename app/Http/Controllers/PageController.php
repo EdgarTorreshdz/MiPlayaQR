@@ -50,7 +50,9 @@ class PageController extends Controller
 
     public function admin(){
         //$usuarios = App\User::all();
-        return view('admin');
+        $encuesta = App\Encuesta::all();
+        return view('admin',compact('encuesta'));
+
     }
 
     public function welcome(){
@@ -129,6 +131,8 @@ class PageController extends Controller
         return view('lista',compact('playas'));
 
     }
+
+
 
     public function encuestaUpdate(Request $request, $id){
         $encuesta = App\Encuesta::where('idplaya', $id)->first();

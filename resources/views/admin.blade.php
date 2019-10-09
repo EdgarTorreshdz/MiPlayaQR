@@ -12,33 +12,42 @@
 @extends('layouts.menu')
 @section('content')
     <div class="contenedor-1">
-        <p>Resumen de Playas</p>
-        <div class="sub-cont">
-            <div class="encuestas color-1">
-                <p>Encuestas Recientes</p>
-                <p>143 Encuestas</p>
-                <hr/>
-                <a href="#"><span class="icon-circle-right"></span> Ver Encuestas</a>
-            </div>
-            <div class="encuestas color-2">
-                <p>Encuestas Recientes</p>
-                <p>143 Encuestas</p>
-                <hr/>
-                <a href="#"><span class="icon-circle-right"></span> Ver Encuestas</a>
-            </div>
-            <div class="encuestas color-3">
-                <p>Encuestas Recientes</p>
-                <p>143 Encuestas</p>
-                <hr/>
-                <a href="#"><span class="icon-circle-right"></span> Ver Encuestas</a>
-            </div>
-            <div class="encuestas color-4">
-                <p>Encuestas Recientes</p>
-                <p>150 Encuestas</p>
-                <hr/>
-                <a href="#"><span class="icon-circle-right"></span> Ver Encuestas</a>
-            </div>
-        </div>
+        <p>Resultados de encuestas</p>
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Basura generada por el hombre</th>
+      <th scope="col">Basura generada por el sargaso</th>
+      <th scope="col">Basura organica</th>
+      <th scope="col">Basura inorganica</th>
+      <th scope="col">Mucha basura</th>
+      <th scope="col">Poca basura</th>
+      <th scope="col">Menos de cincuenta persona por playa</th>
+      <th scope="col">Menos de cien personas por playa</th>
+      <th scope="col">Más de cien personas por playa</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($encuesta as $recorrido)
+    <tr>
+      <td>{{$recorrido->hombre}}</td>
+      <td>{{$recorrido->sargazo}}</td>
+      <td>{{$recorrido->organica}}</td>
+      <td>{{$recorrido->inorganica}}</td>
+      <td>{{$recorrido->mucha}}</td>
+      <td>{{$recorrido->poca}}</td>
+      <td>{{$recorrido->menosCincuenta}}</td>
+      <td>{{$recorrido->menosCien}}</td>
+      <td>{{$recorrido->masCien}}</td>
+
+      <td>
+      <!--a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a-->
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
     </div>
 
 </body>
