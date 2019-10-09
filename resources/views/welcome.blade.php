@@ -34,16 +34,18 @@
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
 <div id="app">
-<nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
+<nav class="navbar navbar-expand-md nav nav-light shadow-sm" style="height: auto;">
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/Logo.png" alt="" style="width:100px;">
+                <img src="images/2076984.png" alt="" style="width:50px;">
+                <p class="F-logo">MI PLAYAQR</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="icon-menu" style="color:white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,11 +59,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registros') }}</a>
                                 </li>
                             @endif
                             
@@ -84,7 +86,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Salir') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -117,18 +119,6 @@
    <!-- Icons Grid -->
 <section class="features-icons bg-light text-center">
   <div class="container">
-
-    <h3 class="col-sm-5"> La playa más cercana: 
-    </h3>
-
-
-      <select class="form-control form-control col-sm-5">
-          <option>Hoy</option>
-          <option>Ayer</option>
-          <option>Última semana</option>
-          <option>Último mes</option>
-      </select>
-
 
     <h3 class="col-sm-6" id="izquierda">La playa más limpia:
     </h3>
@@ -185,12 +175,10 @@
               <h2 class="mb-4 text-azul">Nuestros Objetivos</h2>
               <p>Nuestros objetivos a corto plazo:</p>
 
-              <ul class="ul-check primary list-unstyled mt-5">
-                <li>Cargo express</li>
-                <li>Secure Services</li>
-                <li>Secure Warehouseing</li>
-                <li>Cost savings</li>
-                <li>Proven by great companies</li>
+              <ul class="primary list-unstyled mt-5">
+                <li>°Generar datos de aceptación de las playas.</li>
+                <li>°Generar datos de la contaminación de playas.</li>
+                <li>°Evaluación hecha por los usuarios.</li>
               </ul>
 
             </div>
@@ -239,41 +227,29 @@
             </div>
         </div>
       </div>
+      </div>
 
       <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-7">
             <div class="row">
               <div class="col-md-7">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptate debitis voluptatum et dolorum.</p>
+                <h2 class="footer-heading mb-4">Mi PlayaQR:</h2>
+                <p>Todos los derechos reservados a Mi PlayaQR</p>
               </div>
               <div class="col-md-4 ml-auto">
-                <h2 class="footer-heading mb-4">Features</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
+                <h2 class="footer-heading mb-4">Nos localizamos en:</h2>
+                <p>Carretera Cancún-Aeropuerto, Km. 11.5 S.M. 299, Mz. 5, Lt 1, 77565 Cancùn, Q.R.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 ml-auto">
-            <h2 class="footer-heading mb-4">Follow Us</h2>
-            <a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+            <h2 class="footer-heading mb-4">Contacto:</h2>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Facebook</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Twiiter</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Instagram</span></a></li>
             </form>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            </div>
           </div>
         </div>
       </div>

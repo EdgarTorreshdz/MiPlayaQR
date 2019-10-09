@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/cartas.css">
+<link rel="stylesheet" href="css/fonts.css">
 
 
 </head>
@@ -43,11 +44,11 @@
         <nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/Logo.png" alt="" style="width:100px;">
-                
+                <img src="images/2076984.png" alt="" style="width:50px;">
+                <p class="F-logo">MI PLAYAQR</p>     
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <span class="icon-menu" style="color:white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -106,9 +107,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
             @yield('content')
-        </main>
+ 
     </div>
 </body>
 </html>
