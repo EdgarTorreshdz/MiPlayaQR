@@ -41,6 +41,7 @@ class PageController extends Controller
             $playas->votospositivos=$playas->votospositivos+1;
         }
         $playas->save();
+        return back()->with('mensaje','Voto Realizado');
     }
     
     public function usuarios(){
