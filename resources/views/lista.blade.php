@@ -15,6 +15,12 @@
 @extends('layouts.menu')
 @section('content')
 
+    <style>
+      .py-4{
+        padding-top: 0rem!important;
+        padding-bottom: 0rem!important;
+      } 
+    </style>
 
     <div class="contenedor-1">
     <h1>Usuarios - MiplayaQR</h1>

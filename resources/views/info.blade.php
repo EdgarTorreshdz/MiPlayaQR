@@ -11,6 +11,14 @@
     <title>HEY</title>
 </head>
 <body>
+
+  <style>
+    .py-4{
+      padding-top: 0rem!important;
+      padding-bottom: 0rem!important;
+    } 
+  </style>
+  
 @extends('layouts.menu')
 @section('content')
 <div class="contenedor-1">
