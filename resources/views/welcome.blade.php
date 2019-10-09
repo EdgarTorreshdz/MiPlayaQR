@@ -34,16 +34,18 @@
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
 <div id="app">
 <nav class="navbar navbar-expand-md nav nav-light shadow-sm" style="height: auto;">
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/Logo.png" alt="" style="width:100px;">
+                <img src="images/2076984.png" alt="" style="width:50px;">
+                <p class="F-logo">MI PLAYAQR</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon" style="color:white;">///</span>
+                    <span class="icon-menu" style="color:white"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,11 +59,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registro') }}</a>
                                 </li>
                             @endif
                             
@@ -84,7 +86,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Salir') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -105,7 +107,7 @@
             <div class="col-md-7 text-center">
               <div class="block-heading-1">
                 <h2>¡Encuentra tu playa!</h2>
-                <button id="ubicacion" style="margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
+                <button id="ubicacion" style="margin-top: 35px; margin-bottom: 20px; height:50px;" class="btn btn-primary">Obtener ubicación</button>
               </div>
             </div>
           </div>
@@ -113,49 +115,12 @@
       </div>
 
 
-
-   <!-- Icons Grid -->
-<section class="features-icons bg-light text-center">
-  <div class="container">
-
-
-
-    <h3 class="col-sm-6" id="izquierda">La playa más limpia:
-    </h3>
-
-
-    <select class="form-control form-control col-sm-5" id="izquierdaf">
-          <option>Hoy</option>
-          <option>Ayer</option>
-          <option>Última semana</option>
-          <option>Último mes</option>
-    </select>
-
-  </div>
-  <div class="container">
-
-  <br>
-  <br>
-
-
-</div>
-  <div class="container">
-  <div class="row"> 
-  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Buscar</a>
-  </div>
-  <br>
-<br>  
-  </div>
-</section>
-
-
-
  <section id="subscribe">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12 text-center" >
-          <h3 class="subscribe-title">Únete a nosotros y ayuda al planeta.</h3>
-          <p class="subscribe-text">Un mundo  mejor es nuestro límite y no desansaremos hasta ver avances.</p>
+          <h3 class="subscribe-title">Ayudanos a mejorar para ti.</h3>
+          <p class="subscribe-text">Caribe mexicano recibió 14.2 millones de turistas en 2018 ¡Disfruta tu Estado!.</p>
         </div>
       </div>
     </div>
@@ -175,12 +140,10 @@
               <h2 class="mb-4 text-azul">Nuestros Objetivos</h2>
               <p>Nuestros objetivos a corto plazo:</p>
 
-              <ul class="ul-check primary list-unstyled mt-5">
-                <li>Cargo express</li>
-                <li>Secure Services</li>
-                <li>Secure Warehouseing</li>
-                <li>Cost savings</li>
-                <li>Proven by great companies</li>
+              <ul class="primary list-unstyled mt-5">
+                <li>°Generar datos de aceptación de las playas.</li>
+                <li>°Generar datos de la contaminación de playas.</li>
+                <li>°Evaluación hecha por los usuarios.</li>
               </ul>
 
             </div>
@@ -194,8 +157,8 @@
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
               <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                <h2>Our Staff</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h2>Equipo de desarrollo.</h2>
+                <p>Estudiantes de la Universidad Tecnologica de Cancún.</p>
               </div>
             </div>
           </div>
@@ -205,8 +168,8 @@
               <figure>
                 <img src="images/edgar.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Edgar Antonio Torres Hernández</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <h3 class="font-size-20 text-black">Edgar Antonio Torres</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
@@ -215,7 +178,7 @@
                 <img src="images/ricardo.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Ricardo</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
@@ -223,8 +186,8 @@
               <figure>
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Nicole Lewis</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <h3 class="font-size-20 text-black">Jose Ángel Uc</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
         </div>
@@ -248,9 +211,9 @@
           </div>
           <div class="col-md-4 ml-auto">
             <h2 class="footer-heading mb-4">Contacto:</h2>
-            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Facebook</span></a></li>
-            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Twiiter</span></a></li>
-            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Instagram</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook"> Facebook</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-twitter"> Twiiter</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-instagram"> Instagram</span></a></li>
             </form>
           </div>
         </div>
