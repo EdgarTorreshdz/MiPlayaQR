@@ -21,27 +21,26 @@
     <link href="css/mapa.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqLUn1LcX7EQVldV2uheSxnoeQjHyWNM&callback"async defer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqLUn1LcX7EQVldV2uheSxnoeQjHyWNM&callback"
+    async defer>   
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     async defer></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="fonts/icomoon/style.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
+<nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/Logo.png" alt="" style="width:100px;">
+                <img src="images/logo.png" alt="" style="width:100px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -93,20 +92,16 @@
                                     </form>
                                 </div>
                             </li>
-                            
-                        @endguest
+                            @endguest
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
     <div id="map"></div>
-    
-    
-<div class="site-section bg-light" id="services-section">
+    <div class="site-section bg-light" id="services-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
-          
             <div class="col-md-7 text-center">
               <div class="block-heading-1">
                 <h2>¡Encuentra tu playa!</h2>
@@ -165,7 +160,7 @@
 
 
 
-    <section id="subscribe">
+ <section id="subscribe">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12 text-center" >
@@ -209,7 +204,7 @@
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
               <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                <h2>Equipo de desarrollo</h2>
+                <h2>Our Staff</h2>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
             </div>
@@ -222,7 +217,7 @@
               </figure>
               <h3 class="font-size-20 text-black">Max Carlson</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
-              <p class="mb-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
             <div class="block-team-member-1 text-center rounded h-100">
@@ -231,7 +226,7 @@
               </figure>
               <h3 class="font-size-20 text-black">Charlotte Pilat</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
-              <p class="mb-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
             <div class="block-team-member-1 text-center rounded h-100">
@@ -240,17 +235,12 @@
               </figure>
               <h3 class="font-size-20 text-black">Nicole Lewis</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
-              <p class="mb-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
+              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
-
-            
-
-
         </div>
       </div>
 
-<footer class="site-footer">
+      <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -269,7 +259,6 @@
                   <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>
-
             </div>
           </div>
           <div class="col-md-4 ml-auto">
@@ -369,9 +358,6 @@ $("#ubicacion").css("display", "none");
         /**/
         
     </script>
-    <script>$('.carousel').carousel()</script>
-    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBw-vOkQq7mPD-46S1GOq-dCPcmFmxNkko&callback=initMap"
-    async defer></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
