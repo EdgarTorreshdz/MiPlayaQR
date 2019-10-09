@@ -1,12 +1,15 @@
-
 #carta{
     max-width: 50%;
     float: center;
     margin: 20px;
-    background: #CAC8C8;
+    background: white;
     margin-left: 25%;
+    border: 0px;
 }
-h1{
-    text-align: center;
-    color: black;
+h4{
+    color: #23374d;
+    font-weight: bold;
+}
+#Ubi{
+    font-weight: bold;
 }
