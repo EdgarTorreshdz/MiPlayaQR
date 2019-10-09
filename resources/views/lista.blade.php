@@ -54,7 +54,7 @@
       <td>{{$recorrido->nombre}}</td>
       <td>{{$recorrido->ubicacion}}</td>
       <td>
-      <a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a>
+      <!--a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a-->
 
       <form action="{{route('playas.eliminar',$recorrido->id)}}" method="POST" >
         @csrf

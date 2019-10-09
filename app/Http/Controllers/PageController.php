@@ -14,11 +14,18 @@ class PageController extends Controller
         return view('playas',compact('playas'));
     }
     public function show($playa){
-        $playas = App\Playa::find($playa);
+        $playas = App\Playa::find($playa);  
         return view('playas.detalle',[
             'playa'=>$playas
         ]);
     }
+    public function encuesta($playa){
+        $playas = App\Playa::find($playa);  
+        return view('playas.encuesta.encuesta',[
+            'playa'=>$playas
+        ]);
+    }
+
 
     public function votar(Request $request, $playa){
         $playas = App\InformacionPlayas::where('idplaya',$playa)->first();
@@ -73,6 +80,38 @@ class PageController extends Controller
         //return $request->all();
     }
 
+    /*public function editar(Request $request, $id){
+        $playasEditar = App\Playa::findOrFail($id);
+        $playasEditar->save();
+        return back()->with('mensaje','Playa editada');
+    }*/
+    /*public function eliminar($id){
+        $playasEliminar= App\Playa::findOrFail($id);
+        $playasEliminar->delete();
+        return back()->with('mensaje', 'Playa Eliminada');
+    }*/
+    /*public function crear(Request $request){
+        
+        $request->validate([
+            'nombre'=>'required|max:40',
+            'latitud'=>'required|max:10',
+            'longitud'=>'required|max:10',
+            'ubicacion'=>'required|max:40',
+
+        ]);
+
+        $playaNueva= new App\Playa;
+        $playaNueva->nombre = $request->nombre;
+        $playaNueva->imagen=$request->imagen;
+        $playaNueva->latitud=$request->latitud;
+        $playaNueva->longitud=$request->longitud;
+        $playaNueva->ubicacion = $request->ubicacion;
+        $playaNueva->save();
+        return back()->with('mensaje','Playa Creada');
+
+        //return $request->all();
+    }*/
+
     public function editar($id){
         $playasEditar = App\Playa::findOrFail($id);
         return view('editar',compact('playasEditar'));
@@ -83,9 +122,57 @@ class PageController extends Controller
         $playasEliminar->delete();
         return back()->with('mensaje', 'Playa Eliminada');
     }
+
+
     public function listaPlaya(){
         $playas = App\Playa::all();
         return view('lista',compact('playas'));
 
+    }
+
+    public function encuestaUpdate(Request $request, $id){
+        $encuesta = App\Encuesta::where('idplaya', $id)->first();
+        if(is_null($encuesta)){
+            $encuesta = new App\Encuesta();
+            $encuesta->idplaya=$id;
+            $encuesta->hombre=0;
+            $encuesta->sargazo=0;
+            $encuesta->organica=0;
+            $encuesta->inorganica=0;
+            $encuesta->mucha=0;
+            $encuesta->poca=0;
+            $encuesta->menosCincuenta=0;
+            $encuesta->menosCien=0;
+            $encuesta->masCien=0;
+        }
+        if($request->pregunta1=="SI"){
+            $encuesta->hombre = $encuesta->hombre + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->sargazo = $encuesta->sargazo + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->organica = $encuesta->organica + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->inorganica = $encuesta->inorganica + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->mucha = $encuesta->mucha + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->poca = $encuesta->poca + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->menosCincuenta = $encuesta->menosCincuenta + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->menosCien = $encuesta->menosCien + 1;
+        }
+        if($request->pregunta1=="NA"){
+            $encuesta->masCien = $encuesta->masCien + 1;
+        }
+        $encuesta->save();
+        return back()->with('mensaje','Voto Realizado');
     }
 }

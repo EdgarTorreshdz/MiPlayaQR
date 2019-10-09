@@ -9,6 +9,7 @@ route::group(['middleware'=>'usuarioStandard'],function()     {
     Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
     Route::get('/playas', 'PageController@playas')->name('playas');
     Route::get('/playas/{playa}', 'PageController@show')->name('playas.show');
+    Route::get('/playas/{playa}/encuesta', 'PageController@encuesta')->name('playas.encuesta.encuesta');
 
 });
 Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
@@ -31,5 +32,8 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
 });
 
 Route::post('/', 'PageController@crear')->name('playas.crear');
+Route::post('/', 'PageController@crear')->name('playas.crear');
 Route::delete('/eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
 Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
+
+Route::post('/encuestaok/{id}', 'PageController@encuestaupdate')->name('encuesta');

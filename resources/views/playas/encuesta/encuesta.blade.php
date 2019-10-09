@@ -25,8 +25,8 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="css/menu.css" rel="stylesheet">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link href="../../css/menu.css" rel="stylesheet">
-<link href="../../css/mapa.css" rel="stylesheet">
+<link href="../css/menu.css" rel="stylesheet">
+<link href="../css/mapa.css" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="">
 <link rel="stylesheet" href="../../css/bootstrap.min.css">
@@ -105,27 +105,135 @@
                 </div>
             </div>
         </nav>
-        <?php //var_dump($playa) ?>
-    <div class="contenedor">
-    <div id="card" class="card" style="width: 50%; margin-left:25%; ">
-        <img src="../img/delfines.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{$playa->nombre}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="container">
-            <form class="row" action="/playas/{{$playa->id}}" method="post">
-                <div class="col">
-                    <input name="tipo" value="bueno" type="submit" class="btn btn-primary">
-                </div>
-                <div class="col">
-                    <input name="tipo" value="malo" type="submit" class="btn btn-danger" style="float: right">
-                </div>
-                @csrf
-            </form>
-            </div>
-            <div class="col">
-            <a class="btn btn-primary" href="/playas/{{$playa->id}}/encuesta" role="button" style="width: 100%; margin-rigth: 1px; margin-top: 10px;">Encuesta</a>
-            </div>
-        </div>
-        </div>
-    </div>
+
+
+<br />
+  <div class="container">
+    <section class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Encuesta sobre la contaminación en la {{$playa->nombre}}</h1>
+      </div>
+    </section>
+    <hr><br />
+    <section class="row">
+      <section class="col-md-12">
+        <h3>Datos basicos</h3>
+        <p></p>
+      </section>
+    </section>
+    
+
+    <!--  Servicios  -->
+    <section class="row">
+      <div class="col-md-12">
+        <h3>Servicio.</h3>
+        <p></p>
+      </div>
+    </section>
+    <form action="{{route('encuesta',$playa->id)}}" method="POST">
+    @csrf
+    <!--  PREGUNTA 1  -->
+    <section class="row">
+      <div class="col-md-6">
+        <p>1- ¿Qué clase de contaminante hay?</p>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta1" id="pregunta1a" value="SI"> Generados por el hombre
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta1" id="preguntab" value="NO"> Sargazo
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta1" id="preguntac" value="NA"> N/A
+      </label>
+      </div>
+    </section>
+    <!--  PREGUNTA 2  -->
+    <section class="row">
+      <div class="col-md-6">
+        <p>2-¿Qué tipo de basura hay en la playa? </p>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta2" id="pregunta1a" value="SI"> Organico
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta2" id="preguntab" value="NO"> Inorganico
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta2" id="preguntac" value="NA"> N/A
+      </label>
+      </div>
+    </section>
+    <!--  PREGUNTA 3  -->
+    <section class="row">
+      <div class="col-md-6">
+        <p>3- ¿Hay mucha basura? </p>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta3" id="pregunta1a" value="SI"> Si
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta3" id="preguntab" value="NO"> No
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta3" id="preguntac" value="NA"> N/A
+      </label>
+      </div>
+    </section>
+    <!--  PREGUNTA 4  -->
+    <section class="row">
+      <div class="col-md-6">
+        <p>4- Aproximadamente ¿Cuánta gente hay?</p>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta4" id="pregunta1a" value="SI"> menos de 50 personas
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta4" id="preguntab" value="NO"> menos de 100 personas
+      </label>
+      </div>
+      <div class="col-md-2">
+        <label class="radio">
+        <input type="radio" name="pregunta4" id="preguntac" value="NA"> más de 100 personas
+      </label>
+      </div>
+    </section><br>
+    <hr>
+    <!--  Durante la Atención  -->
+    <section class="row">
+      <div class="col-md-12">
+        <h3>Durante la Atención.</h3>
+        <p></p>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-md-12">
+      
+          <button type="submit" class="btn btn-info" id="saveForm" onclick="saveForm">Guardar Encuesta</button>
+
+        
+      </div>
+    </section>
+    </form>
+  </div>
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
