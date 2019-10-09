@@ -14,11 +14,18 @@ class PageController extends Controller
         return view('playas',compact('playas'));
     }
     public function show($playa){
-        $playas = App\Playa::find($playa);
+        $playas = App\Playa::find($playa);  
         return view('playas.detalle',[
             'playa'=>$playas
         ]);
     }
+    public function encuesta($playa){
+        $playas = App\Playa::find($playa);  
+        return view('playas.encuesta.encuesta',[
+            'playa'=>$playas
+        ]);
+    }
+
 
     public function votar(Request $request, $playa){
         $playas = App\InformacionPlayas::where('idplaya',$playa)->first();
