@@ -118,10 +118,13 @@
                     <input name="tipo" value="bueno" type="submit" class="btn btn-primary">
                 </div>
                 <div class="col">
-                    <input name="tipo" value="malo" type="submit" class="btn btn-danger">
+                    <input name="tipo" value="malo" type="submit" class="btn btn-danger" style="float: right">
                 </div>
                 @csrf
             </form>
+            </div>
+            <div class="col">
+            <a class="btn btn-primary" href="/playas/{{$playa->id}}/encuesta" role="button" style="width: 100%; margin-rigth: 1px; margin-top: 10px;">Encuesta</a>
             </div>
         </div>
         </div>

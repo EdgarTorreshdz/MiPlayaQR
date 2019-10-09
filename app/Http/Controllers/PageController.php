@@ -129,4 +129,50 @@ class PageController extends Controller
         return view('lista',compact('playas'));
 
     }
+
+    public function encuestaUpdate(Request $request, $id){
+        $encuesta = App\Encuesta::where('idplaya', $id)->first();
+        if(is_null($encuesta)){
+            $encuesta = new App\Encuesta();
+            $encuesta->idplaya=$id;
+            $encuesta->hombre=0;
+            $encuesta->sargazo=0;
+            $encuesta->organica=0;
+            $encuesta->inorganica=0;
+            $encuesta->mucha=0;
+            $encuesta->poca=0;
+            $encuesta->menosCincuenta=0;
+            $encuesta->menosCien=0;
+            $encuesta->masCien=0;
+        }
+        if($request->pregunta1=="SI"){
+            $encuesta->hombre = $encuesta->hombre + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->sargazo = $encuesta->sargazo + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->organica = $encuesta->organica + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->inorganica = $encuesta->inorganica + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->mucha = $encuesta->mucha + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->poca = $encuesta->poca + 1;
+        }
+        if($request->pregunta2=="SI"){
+            $encuesta->menosCincuenta = $encuesta->menosCincuenta + 1;
+        }
+        if($request->pregunta1=="NO"){
+            $encuesta->menosCien = $encuesta->menosCien + 1;
+        }
+        if($request->pregunta1=="NA"){
+            $encuesta->masCien = $encuesta->masCien + 1;
+        }
+        $encuesta->save();
+        return back()->with('mensaje','Voto Realizado');
+    }
 }

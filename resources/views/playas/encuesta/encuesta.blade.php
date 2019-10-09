@@ -130,6 +130,8 @@
         <p></p>
       </div>
     </section>
+    <form action="{{route('encuesta',$playa->id)}}" method="POST">
+    @csrf
     <!--  PREGUNTA 1  -->
     <section class="row">
       <div class="col-md-6">
@@ -224,36 +226,14 @@
     </section>
     <section class="row">
       <div class="col-md-12">
-          <form action="">
-          <button type="button" class="btn btn-info" id="saveForm" onclick="saveForm">Guardar Encuesta</button>
-          </form>
+      
+          <button type="submit" class="btn btn-info" id="saveForm" onclick="saveForm">Guardar Encuesta</button>
+
         
-        <button type="button" class="btn btn-danger" id="clearForm">Limpiar formulario</button>
       </div>
     </section>
+    </form>
   </div>
 
-  <script>
-  var d = new Date();
-
-// // $("input:radio[name='pregunta']:checked").val();
-
-// guardar todos los datos.
-$('#saveForm').onClick(() => {
-    alert('hola mundos')
-    var datas = {
-        p01: $('input:radio[name=pregunta1]:checked'),
-        p02: $('input:radio[name=pregunta2]:checked'),
-        p03: $('input:radio[name=pregunta3]:checked'),
-        p04: $('input:radio[name=pregunta4]:checked'),
-    }
-    console.log('ejecutando...')
-    console.log(datas)
-    console.log(d)
-});
- $('#clearForm').click(()=>{
-alert('hola mundos')
-});
-  </script>
   <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../js/popper.min.js"></script>
