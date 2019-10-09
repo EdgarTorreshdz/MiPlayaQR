@@ -53,6 +53,14 @@ class PageController extends Controller
 
     public function crear(Request $request){
         
+        $request->validate([
+            'nombre'=>'required|max:40',
+            'latitud'=>'required|max:10',
+            'longitud'=>'required|max:10',
+            'ubicacion'=>'required|max:40',
+
+        ]);
+
         $playaNueva= new App\Playa;
         $playaNueva->nombre = $request->nombre;
         $playaNueva->imagen=$request->imagen;
@@ -65,10 +73,10 @@ class PageController extends Controller
         //return $request->all();
     }
 
-    public function editar(Request $request, $id){
+    public function editar($id){
         $playasEditar = App\Playa::findOrFail($id);
-        $playasEditar->save();
-        return back()->with('mensaje','Playa editada');
+        return view('editar',compact('playasEditar'));
+
     }
     public function eliminar($id){
         $playasEliminar= App\Playa::findOrFail($id);
