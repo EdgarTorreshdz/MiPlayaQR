@@ -68,5 +68,30 @@
         </div>
     </div>
 </div>
+  <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-7">
+                <h2 class="footer-heading mb-4">Mi PlayaQR:</h2>
+                <p>Todos los derechos reservados a Mi PlayaQR</p>
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Nos localizamos en:</h2>
+                <p>Carretera Cancún-Aeropuerto, Km. 11.5 S.M. 299, Mz. 5, Lt 1, 77565 Cancùn, Q.R.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+            <h2 class="footer-heading mb-4">Contacto:</h2>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Facebook</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Twiiter</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook">Instagram</span></a></li>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 @endsection
