@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -40,10 +37,10 @@
 </head>
 <body>
 <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
+<nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images/Logo.png" alt="" style="height: 80px;">
+                <img src="images/Logo.png" alt="" style="width:100px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -95,22 +92,20 @@
                                     </form>
                                 </div>
                             </li>
-                            
-                        @endguest
+                            @endguest
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
     <div id="map"></div>
-    <button id="ubicacion" style="margin-left: 45%; margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
-<div class="site-section bg-light" id="services-section">
+    <div class="site-section bg-light" id="services-section">
         <div class="container">
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
               <div class="block-heading-1">
                 <h2>¡Encuentra tu playa!</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <button id="ubicacion" style="margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
               </div>
             </div>
           </div>
@@ -165,15 +160,12 @@
 
 
 
-    <section id="subscribe">
+ <section id="subscribe">
     <div class="container wow fadeInUp">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12 text-center" >
           <h3 class="subscribe-title">Únete a nosotros y ayuda al planeta.</h3>
           <p class="subscribe-text">Un mundo  mejor es nuestro límite y no desansaremos hasta ver avances.</p>
-        </div>
-        <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="{{ route('register') }}">Registrate</a>
         </div>
       </div>
     </div>
@@ -190,8 +182,8 @@
 
 
             <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
-              <h2 class="mb-4 text-black">Why Depot</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam error aliquid, dolores animi obcaecati quisquam accusamus soluta?</p>
+              <h2 class="mb-4 text-azul">Nuestros Objetivos</h2>
+              <p>Nuestros objetivos a corto plazo:</p>
 
               <ul class="ul-check primary list-unstyled mt-5">
                 <li>Cargo express</li>
@@ -244,16 +236,11 @@
               <h3 class="font-size-20 text-black">Nicole Lewis</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
             </div>
-
-            
-
-
         </div>
       </div>
 
-<footer class="site-footer">
+      <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -272,14 +259,9 @@
                   <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>
-
             </div>
           </div>
           <div class="col-md-4 ml-auto">
-
-           
-
-
             <h2 class="footer-heading mb-4">Follow Us</h2>
             <a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook"></span></a>
             <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -291,18 +273,11 @@
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
-              <p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-   
 <script>
 function localizacion(position){
   map.setCenter({lat: position.coords.latitude, lng: position.coords.longitude});
@@ -395,5 +370,3 @@ $("#ubicacion").css("display", "none");
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
