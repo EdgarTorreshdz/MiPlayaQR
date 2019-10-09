@@ -45,11 +45,7 @@
                 <p class="F-logo">MI PLAYAQR</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-<<<<<<< HEAD
                     <span class="icon-menu" style="color:white"></span>
-=======
-                    <span class="navbar-toggler-icon" style="color:white;">///</span>
->>>>>>> f9fb34e4899bab225b574b501e2ccbf48f7a0c98
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -111,7 +107,7 @@
             <div class="col-md-7 text-center">
               <div class="block-heading-1">
                 <h2>¡Encuentra tu playa!</h2>
-                <button id="ubicacion" style="margin-top: 20px; margin-bottom: 20px;" class="btn btn-primary">Obtener ubicación</button>
+                <button id="ubicacion" style="margin-top: 35px; margin-bottom: 20px; height:50px;" class="btn btn-primary">Obtener ubicación</button>
               </div>
             </div>
           </div>
@@ -119,52 +115,12 @@
       </div>
 
 
-
-   <!-- Icons Grid -->
-<section class="features-icons bg-light text-center">
-  <div class="container">
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f9fb34e4899bab225b574b501e2ccbf48f7a0c98
-    <h3 class="col-sm-6" id="izquierda">La playa más limpia:
-    </h3>
-
-
-    <select class="form-control form-control col-sm-5" id="izquierdaf">
-          <option>Hoy</option>
-          <option>Ayer</option>
-          <option>Última semana</option>
-          <option>Último mes</option>
-    </select>
-
-  </div>
-  <div class="container">
-
-  <br>
-  <br>
-
-
-</div>
-  <div class="container">
-  <div class="row"> 
-  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Buscar</a>
-  </div>
-  <br>
-<br>  
-  </div>
-</section>
-
-
-
  <section id="subscribe">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12 text-center" >
-          <h3 class="subscribe-title">Únete a nosotros y ayuda al planeta.</h3>
-          <p class="subscribe-text">Un mundo  mejor es nuestro límite y no desansaremos hasta ver avances.</p>
+          <h3 class="subscribe-title">Ayudanos a mejorar para ti.</h3>
+          <p class="subscribe-text">Caribe mexicano recibió 14.2 millones de turistas en 2018 ¡Disfruta tu Estado!.</p>
         </div>
       </div>
     </div>
@@ -201,8 +157,8 @@
           <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
               <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                <h2>Our Staff</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h2>Equipo de desarrollo.</h2>
+                <p>Estudiantes de la Universidad Tecnologica de Cancún.</p>
               </div>
             </div>
           </div>
@@ -212,8 +168,8 @@
               <figure>
                 <img src="images/edgar.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Edgar Antonio Torres Hernández</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <h3 class="font-size-20 text-black">Edgar Antonio Torres</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
@@ -222,7 +178,7 @@
                 <img src="images/ricardo.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Ricardo</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
@@ -230,8 +186,8 @@
               <figure>
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Nicole Lewis</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
+              <h3 class="font-size-20 text-black">Jose Ángel Uc</h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
         </div>
