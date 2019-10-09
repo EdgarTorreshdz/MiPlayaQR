@@ -18,14 +18,31 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
+        <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
+<link href="css/mapa.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/aos.css">
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="height: auto;">
+        <nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="../images/Logo.png" alt="" style="height: 80px;">
+                <img src="images/Logo.png" alt="" style="width:100px;">
+                
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

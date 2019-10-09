@@ -297,8 +297,8 @@ h1, h2, h3, h4, h5,
     padding: 4em 0; }
 
 .site-footer {
-  padding: 4em 0;
-  background: #333333; }
+  padding: 0em 0;
+  background: #23374d; }
   @media (min-width: 768px) {
     .site-footer {
       padding: 8em 0; } }
@@ -807,7 +807,7 @@ h1, h2, h3, h4, h5,
     color: #fff; }
 
 .site-section {
-  padding: 5rem 0; }
+  padding: 3rem 0; }
   @media (max-width: 991.98px) {
     .site-section {
       padding: 3rem 0; } }
@@ -1377,7 +1377,7 @@ h1, h2, h3, h4, h5,
     width: 120% !important;
     padding-top: 10px; }
   .owl-all .owl-carousel .owl-stage-outer {
-    width: 100%;
+    width: 80%;
     overflow: visible; }
   .owl-all .owl-stage-outer > .owl-stage > .owl-item {
     display: -ms-inline-grid;
@@ -1458,12 +1458,66 @@ h1, h2, h3, h4, h5,
   background: #007bff;
   border: 2px solid #007bff;
 }
-#nav{
-  background-color: #007bff;
+
+#head-login{
+  text-align: center;
+
+background: #23374d;
+
+color: white;
+
+font-size: 20px;
+}
+#card-login{
+  margin-top:10%;
+  margin-bottom: 30%;
+}
+#btn-log{
+
+height: 40px;
+width: 120px;
+}
+@media(min-width: 720px){
+
+  #img-login{
+    margin-top: -30%;
+  }
+  #btn-log{
+
+    height: 40px;
+    width: 120px;
+    }
+}
+.btn-nuevo{
+  background-color: #66790A;
   color: white;
-  height: 60px;
+}
+.nav{
+  background-color: #23374d;
+  position: relative;
 }
 a{
   text-decoration-style: none;
   color: white;
+}
+.nav-item{
+  font-size: 17px;
+}
+.btn-azul{
+  background-color: #23374d;
+  color: white;
+}
+.text-azul{
+  color:#23374d;
+}
+.nav-link{
+  color:white;
+}
+.F-logo{
+color: white;
+margin-left: 60px;
+margin-top: -35px;
+}
+#btn-l{
+  width: 40%;
 }
