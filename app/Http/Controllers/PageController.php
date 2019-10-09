@@ -60,6 +60,14 @@ class PageController extends Controller
 
     public function crear(Request $request){
         
+        $request->validate([
+            'nombre'=>'required|max:40',
+            'latitud'=>'required|max:10',
+            'longitud'=>'required|max:10',
+            'ubicacion'=>'required|max:40',
+
+        ]);
+
         $playaNueva= new App\Playa;
         $playaNueva->nombre = $request->nombre;
         $playaNueva->imagen=$request->imagen;
