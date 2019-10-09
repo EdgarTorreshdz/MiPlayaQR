@@ -34,7 +34,7 @@
             </div>
             <div class="encuestas color-4">
                 <p>Encuestas Recientes</p>
-                <p>143 Encuestas</p>
+                <p>150 Encuestas</p>
                 <hr/>
                 <a href="#"><span class="icon-circle-right"></span> Ver Encuestas</a>
             </div>

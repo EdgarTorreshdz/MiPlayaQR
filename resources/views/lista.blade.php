@@ -22,9 +22,9 @@
 
     <form action="{{route('playas.crear')}}" method="POST">
       @csrf
-      <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-2">
+    <input type="text" name="nombre"  placeholder="Nombre" class="form-control mb-2">
       <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
-      <input type="number" step="any" name="latitud" placeholder="Latitud" class="form-control mb-2">
+      <input type="number" step="any" name="latitud"  placeholder="Latitud" class="form-control mb-2">
       <input type="number" step="any" name="longitud" placeholder="Longitud" class="form-control mb-2">
       <input type="text" name="ubicacion" placeholder="Estado" class="form-control mb-2">
 
@@ -47,7 +47,15 @@
       <th scope="row">{{$recorrido->id}}</th>
       <td>{{$recorrido->nombre}}</td>
       <td>{{$recorrido->ubicacion}}</td>
-      <td>Acciones</td>
+      <td>
+      <!--a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a-->
+
+      <form action="{{route('playas.eliminar',$recorrido->id)}}" method="POST" >
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+      </form>
+      </td>
     </tr>
     @endforeach
   </tbody>

@@ -24,18 +24,17 @@
     <div class="menu-lateral">
         <div class="avatar">
             <a href="/"><img class="img-avatar" src="./images/2076984.png" alt="Avatar"></a>
-
         </div>
         <nav>
-        <li>
-        <a href="/usuarios"><span class="icon-home"></span>
-            <br>
-            Usuarios</a>
-        </li>
             <li>
             <a href="/admin"><span class="icon-home"></span>
                 <br>
                 Home</a>
+            </li>
+            <li>
+            <a href="/usuarios"><span class="icon-users"></span>
+                <br>
+                Usuarios</a>
             </li>
             <li>
             <a href="/lista"><span class="icon-leaf"></span>
@@ -50,5 +49,5 @@
         </nav>
     </div>
     <main class="py-4">
-            @yield('content')
-        </main>
+        @yield('content')
+    </main>

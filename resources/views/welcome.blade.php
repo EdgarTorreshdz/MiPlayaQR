@@ -45,7 +45,11 @@
                 <p class="F-logo">MI PLAYAQR</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+<<<<<<< HEAD
                     <span class="icon-menu" style="color:white"></span>
+=======
+                    <span class="navbar-toggler-icon" style="color:white;">///</span>
+>>>>>>> f9fb34e4899bab225b574b501e2ccbf48f7a0c98
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -120,6 +124,11 @@
 <section class="features-icons bg-light text-center">
   <div class="container">
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f9fb34e4899bab225b574b501e2ccbf48f7a0c98
     <h3 class="col-sm-6" id="izquierda">La playa más limpia:
     </h3>
 
@@ -144,7 +153,7 @@
   <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="btnEnviar">Buscar</a>
   </div>
   <br>
-<br>
+<br>  
   </div>
 </section>
 
@@ -201,18 +210,18 @@
           <div class="owl-carousel owl-all mb-5">
             <div class="block-team-member-1 text-center rounded h-100">
               <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
+                <img src="images/edgar.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Max Carlson</h3>
+              <h3 class="font-size-20 text-black">Edgar Antonio Torres Hernández</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
 
             <div class="block-team-member-1 text-center rounded h-100">
               <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
+                <img src="images/ricardo.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
-              <h3 class="font-size-20 text-black">Charlotte Pilat</h3>
+              <h3 class="font-size-20 text-black">Ricardo</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Co-Founder</span>
               <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
@@ -299,7 +308,7 @@ $("#ubicacion").css("display", "none");
         var marker = new google.maps.Marker({
           position:{lat:props.latitud,lng:props.longitud},
           map:map,
-          icon:'images/palm.png',
+          icon:'images/palmera.png',
           content:'<a href="/playas/'+props.id+'"> hola'+ props.nombre +'</a>',
           //icon:props.iconImage
         });

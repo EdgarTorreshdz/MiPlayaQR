@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
-
 <section id="subscribe">
     <div class="container wow fadeInUp">
       <div class="row">
