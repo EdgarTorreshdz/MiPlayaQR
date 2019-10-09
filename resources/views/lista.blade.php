@@ -26,7 +26,7 @@
       <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
       <input type="number" step="any" name="latitud" placeholder="Latitud" class="form-control mb-2">
       <input type="number" step="any" name="longitud" placeholder="Longitud" class="form-control mb-2">
-      <input type="text" name="ubicacion" placeholder="Descripcion" class="form-control mb-2">
+      <input type="text" name="ubicacion" placeholder="Estado" class="form-control mb-2">
 
       <button class="btn btn-primary btn-block" type="submit">Agregar</button>
     </form>
