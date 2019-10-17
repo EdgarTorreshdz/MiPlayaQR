@@ -21,7 +21,7 @@
     <link href="css/mapa.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqLUn1LcX7EQVldV2uheSxnoeQjHyWNM&callback"
+    <script src="https://maps.googleapis.com/maps/api/js?key=/*AIzaSyAsqLUn1LcX7EQVldV2uheSxnoeQjHyWNM&callback*/"
     async defer>   
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
