@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\PageController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -29,11 +30,12 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
     Route::get('/lista','PageController@listaPlaya')->name('lista');
     Route::get('/usuarios', 'PageController@Usuarios')->name('usuarios');
     Route::get('/votos','informacionController@infos')->name('votos');
+    Route::post('/', 'PageController@crear')->name('playas.crear');
+    Route::delete('/eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
+    Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
 });
 
-Route::post('/', 'PageController@crear')->name('playas.crear');
-Route::post('/', 'PageController@crear')->name('playas.crear');
-Route::delete('/eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
-Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
+
 
 Route::post('/encuestaok/{id}', 'PageController@encuestaupdate')->name('encuesta');
+
