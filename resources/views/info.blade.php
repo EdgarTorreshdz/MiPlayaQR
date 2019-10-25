@@ -44,7 +44,7 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
+        <th scope="col">Id de la playa</th>
         <th scope="col">Votos positivos</th>
         <th scope="col">Votos Negativos</th>
       </tr>
@@ -53,7 +53,7 @@
       @foreach($information as $recorrido)
       <tr>
         <th scope="row">{{$recorrido->id}}</th>
-        <td>{{$recorrido->nombre}}</td>
+        <td>{{$recorrido->idplaya}}</td>
         <td>{{$recorrido->votospositivos}}</td>
         <td>{{$recorrido->votosnegativos}}</td>
       </tr>

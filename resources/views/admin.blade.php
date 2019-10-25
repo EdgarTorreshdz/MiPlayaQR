@@ -51,7 +51,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta as $recorrido)
+      @foreach($encuesta ?? '' as $recorrido)
         <tr>
         <td>{{$recorrido->hombre}}</td>
       <td>{{$recorrido->sargazo}}</td>
@@ -68,7 +68,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta as $recorrido)
+      @foreach($encuesta ?? '' as $recorrido)
         <tr>
         <td>{{$recorrido->organica}}</td>
       <td>{{$recorrido->inorganica}}</td>
@@ -85,7 +85,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta as $recorrido)
+      @foreach($encuesta ?? '' as $recorrido)
         <tr>
         <td>{{$recorrido->mucha}}</td>
       <td>{{$recorrido->poca}}</td>
@@ -104,7 +104,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta as $recorrido)
+      @foreach($encuesta ?? '' as $recorrido)
         <tr>
         <td>{{$recorrido->menosCincuenta}}</td>
       <td>{{$recorrido->menosCien}}</td>
