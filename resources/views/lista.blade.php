@@ -1,32 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <title>HEY</title>
-</head>
-<body>
-
-@extends('layouts.menu')
+@extends('layouts.app')
 @section('content')
 
-    <style>
-      .py-4{
-        padding-top: 0rem!important;
-        padding-bottom: 0rem!important;
-      } 
-    </style>
+<div class="container row">
+  
+  <div class="col-2 menu-lateral">
+        <nav>
+            <li>
+              <br>
+            <a href="/admin"><span class="icon-home"></span>
+                <br>
+                Home</a>
+            </li>
+            <li>
+              <br>
+            <a href="/usuarios"><span class="icon-users"></span>
+                <br>
+                Usuarios</a>
+            </li>
+            <li>
+              <br>
+            <a href="/lista"><span class="icon-leaf"></span>
+                <br>
+                Playas</a>
+            </li>
+            <li>
+              <br>
+            <a href="votos"><span class="icon-file-text"></span>
+                <br>
+                Encuestas</a>
+            </li>
+            <li>
+                
+            </li>
+          </nav>
+        </div>
+    
+    <div class="admin1 col-10">
+        <div class="text-center" >
+          <h2 class="subscribe-title">Resultados de encuestas</h2>
+          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+        </div>
 
-    <div class="contenedor-1">
-    <h1>Usuarios - MiplayaQR</h1>
-
-
-    <form action="{{route('playas.crear')}}" method="POST">
+        <form action="{{route('playas.crear')}}" method="POST" class="form1">
       @csrf
     <input type="text" name="nombre"  placeholder="Nombre" class="form-control mb-2">
       <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
@@ -36,12 +51,16 @@
 
       <button class="btn btn-primary btn-block" type="submit">Agregar</button>
     </form>
+
+    <br>
+    <br>
+    <br>
     
     
     <table class="table">
-  <thead>
+  <thead class="thead-dark">
     <tr>
-      <th scope="col">#id</th>
+      <th scope="col">Id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Estado</th>
       <th scope="col"> acciones</th>
@@ -66,9 +85,16 @@
     @endforeach
   </tbody>
 </table>
-        </div>
+        
     </div>
-
+  </div>
 </body>
 </html>
+
+    
+    
+  
+
+
 @endsection
+

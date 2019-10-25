@@ -1,35 +1,58 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-
-    <title>HEY</title>
-</head>
-<body>
-@extends('layouts.menu')
+@extends('layouts.app')
 @section('content')
-  <div class="contenedor-1">
-    <h1>Usuarios - MiplayaQR</h1>
 
-    <table class="table">
-      <thead>
+<div class="container row">
+  
+  <div class="col-2 menu-lateral">
+        <nav>
+            <li>
+              <br>
+            <a href="/admin"><span class="icon-home"></span>
+                <br>
+                Home</a>
+            </li>
+            <li>
+              <br>
+            <a href="/usuarios"><span class="icon-users"></span>
+                <br>
+                Usuarios</a>
+            </li>
+            <li>
+              <br>
+            <a href="/lista"><span class="icon-leaf"></span>
+                <br>
+                Playas</a>
+            </li>
+            <li>
+              <br>
+            <a href="votos"><span class="icon-file-text"></span>
+                <br>
+                Encuestas</a>
+            </li>
+            <li>
+                
+            </li>
+          </nav>
+        </div>
+    
+    <div class="admin1 col-10">
+        <div class="text-center" >
+          <h2 class="subscribe-title">Resultados de encuestas</h2>
+          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+        </div>
+        <table class="table">
+      <thead class="thead-dark">
         <tr>
-          <th scope="col">#id</th>
+          <th scope="col">Id</th>
           <th scope="col">Nombre</th>
           <th scope="col">Correo</th>
-          <th scope="col">permiso</th>
+          <th scope="col">Permiso</th>
         </tr>
       </thead>
       <tbody>
         @foreach($usuarios as $recorrido)
         <tr>
-          <th scope="row">{{$recorrido->id}}</th>
+          <th >{{$recorrido->id}}</th>
           <td>{{$recorrido->name}}</td>
           <td>{{$recorrido->email}}</td>
           <td>{{$recorrido->permiso}}</td>
@@ -39,7 +62,12 @@
     </table>
     </div>
   </div>
-
 </body>
 </html>
+
+    
+    
+  
+
+
 @endsection

@@ -1,33 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <title>HEY</title>
-</head>
-<body>
-
-  <style>
-    .py-4{
-      padding-top: 0rem!important;
-      padding-bottom: 0rem!important;
-    } 
-  </style>
-  
-@extends('layouts.menu')
+@extends('layouts.app')
 @section('content')
-<div class="contenedor-1">
- <h1>Informacion diaria de playas</h1>
 
-<table class="table">
-    <thead>
+<div class="container row">
+  
+  <div class="col-2 menu-lateral">
+        <nav>
+            <li>
+              <br>
+            <a href="/admin"><span class="icon-home"></span>
+                <br>
+                Home</a>
+            </li>
+            <li>
+              <br>
+            <a href="/usuarios"><span class="icon-users"></span>
+                <br>
+                Usuarios</a>
+            </li>
+            <li>
+              <br>
+            <a href="/lista"><span class="icon-leaf"></span>
+                <br>
+                Playas</a>
+            </li>
+            <li>
+              <br>
+            <a href="votos"><span class="icon-file-text"></span>
+                <br>
+                Encuestas</a>
+            </li>
+            <li>
+                
+            </li>
+          </nav>
+        </div>
+    
+    <div class="admin1 col-10">
+        <div class="text-center" >
+          <h2 class="subscribe-title">Resultados de encuestas</h2>
+          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+        </div>
+        <table class="table">
+    <thead class="thead-dark">
       <tr>
-        <th scope="col">#id</th>
+        <th scope="col">Id</th>
         <th scope="col">Nombre</th>
         <th scope="col">Votos positivos</th>
         <th scope="col">Votos Negativos</th>
@@ -44,6 +60,14 @@
       @endforeach
     </tbody>
   </table>
-</div>
- 
- @endsection
+    </div>
+  </div>
+</body>
+</html>
+
+    
+    
+  
+
+
+@endsection

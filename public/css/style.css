@@ -1563,7 +1563,13 @@ background: #23374d;
   .table{
     margin-left: 8px;
   }
+  .form1{
+    margin-left: 8px;
+  }
 }
 .table{
+  margin-left: 20px;
+}
+.form1{
   margin-left: 20px;
 }
