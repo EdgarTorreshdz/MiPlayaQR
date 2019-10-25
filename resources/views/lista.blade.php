@@ -37,8 +37,7 @@
     
     <div class="admin1 col-10">
         <div class="text-center" >
-          <h2 class="subscribe-title">Resultados de encuestas</h2>
-          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+          <h2 class="subscribe-title">Registro de playas</h2>
         </div>
 
         <form action="{{route('playas.crear')}}" method="POST" class="form1">
@@ -56,7 +55,8 @@
     <br>
     <br>
     
-    
+    <h2 class="subscribe-title" style="text-align: center;">Playas Registradas</h2>
+
     <table class="table">
   <thead class="thead-dark">
     <tr>

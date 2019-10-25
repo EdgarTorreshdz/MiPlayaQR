@@ -37,14 +37,12 @@
     
     <div class="admin1 col-10">
         <div class="text-center" >
-          <h2 class="subscribe-title">Resultados de encuestas</h2>
-          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+          <h2 class="subscribe-title">Resultados de votaciones</h2>
         </div>
         <table class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Id</th>
-        <th scope="col">Id de la playa</th>
         <th scope="col">Votos positivos</th>
         <th scope="col">Votos Negativos</th>
       </tr>
@@ -53,7 +51,6 @@
       @foreach($information as $recorrido)
       <tr>
         <th scope="row">{{$recorrido->id}}</th>
-        <td>{{$recorrido->idplaya}}</td>
         <td>{{$recorrido->votospositivos}}</td>
         <td>{{$recorrido->votosnegativos}}</td>
       </tr>
