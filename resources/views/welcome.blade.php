@@ -131,7 +131,7 @@
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
-            <div class="col-12 col-lg-6 block__73422 order-lg-2" style="background-image: url('images/depot_delivery_1.jpg');" data-aos="fade-left" data-aos-delay="">
+            <div  style="background-image: url('images/depot_delivery_1.jpg');" data-aos="fade-left" data-aos-delay="">
             </div>
 
 
