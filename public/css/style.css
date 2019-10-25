@@ -1547,7 +1547,7 @@ background: #23374d;
   text-align: center;
 }
 
-@media(max-width: 480px){
+@media(max-width: 720px){
   .menu-lateral nav li{
     list-style: none;
     width: 100%;

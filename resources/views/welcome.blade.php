@@ -169,8 +169,8 @@
                 <img src="images/edgar.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Edgar Antonio Torres</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
-              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador de back.</span>
+              <a href="https://www.facebook.com/edgaar.toorres.1" style="color: black;">Facebook</a>  
             </div>
 
             <div class="block-team-member-1 text-center rounded h-100">
@@ -178,8 +178,8 @@
                 <img src="images/ricardo.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Ricardo</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
-              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador de back.</span>
+              <a href="https://www.facebook.com/profile.php?id=100013508238804" style="color: black;">Facebook</a>  
             </div>
 
             <div class="block-team-member-1 text-center rounded h-100">
@@ -187,8 +187,8 @@
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Jose Ángel Uc</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador.</span>
-              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador de front.</span>
+              <a href="https://www.facebook.com/RicarcasCruz" style="color: black;">Facebook</a>  
             </div>
         </div>
       </div>

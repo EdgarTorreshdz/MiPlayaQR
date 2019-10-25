@@ -37,8 +37,7 @@
     
     <div class="admin1 col-10">
         <div class="text-center" >
-          <h2 class="subscribe-title">Resultados de encuestas</h2>
-          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+          <h2 class="subscribe-title">Usuarios de MiPlayaQR</h2>
         </div>
         <table class="table">
       <thead class="thead-dark">
@@ -55,19 +54,43 @@
           <th >{{$recorrido->id}}</th>
           <td>{{$recorrido->name}}</td>
           <td>{{$recorrido->email}}</td>
-          <td>{{$recorrido->permiso}}</td>
+          <td>@if($recorrido->permiso==1)
+             Administrador
+          @else
+            usuario
+          @endif</td>
         </tr>
         @endforeach
       </tbody>
     </table>
     </div>
   </div>
+  <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-7">
+                <h2 class="footer-heading mb-4">Mi PlayaQR:</h2>
+                <p>Todos los derechos reservados a Mi PlayaQR</p>
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Nos localizamos en:</h2>
+                <p>Carretera Cancún-Aeropuerto, Km. 11.5 S.M. 299, Mz. 5, Lt 1, 77565 Cancùn, Q.R.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+            <h2 class="footer-heading mb-4">Contacto:</h2>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-facebook"> Facebook</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-twitter"> Twiiter</span></a></li>
+            <li><a href="#about-section" class="smoothscroll pl-0 "><span class="icon-instagram"> Instagram</span></a></li>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer> 
 </body>
 </html>
-
-    
-    
-  
-
 
 @endsection
