@@ -1,31 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <title>Document</title>
-</head>
-<body>
-@extends('layouts.menu')
+@extends('layouts.app')
 @section('content')
-    <div class="contenedor-1">
-        <p>Resultados de encuestas</p>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Basura generada por el hombre</th>
-      <th scope="col">Basura generada por el sargaso</th>
-      <th scope="col">Basura organica</th>
-      <th scope="col">Basura inorganica</th>
-      <th scope="col">Mucha basura</th>
-      <th scope="col">Poca basura</th>
-      <th scope="col">Menos de cincuenta persona por playa</th>
-      <th scope="col">Menos de cien personas por playa</th>
-      <th scope="col">Más de cien personas por playa</th>
 
+<div class="container row">
+  
+  <div class="col-2 menu-lateral">
+        <nav>
+            <li>
+              <br>
+            <a href="/admin"><span class="icon-home"></span>
+                <br>
+                Home</a>
+            </li>
+            <li>
+              <br>
+            <a href="/usuarios"><span class="icon-users"></span>
+                <br>
+                Usuarios</a>
+            </li>
+            <li>
+              <br>
+            <a href="/lista"><span class="icon-leaf"></span>
+                <br>
+                Playas</a>
+            </li>
+            <li>
+              <br>
+            <a href="votos"><span class="icon-file-text"></span>
+                <br>
+                Encuestas</a>
+            </li>
+            <li>
+                
+            </li>
+          </nav>
+        </div>
+    
+    <div class="admin1 col-10">
+        <div class="text-center" >
+          <h2 class="subscribe-title">Resultados de encuestas</h2>
+          <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
+        </div>
+        <table class="table">
+  <thead class="thead-dark container">
+    <tr class="row">
+      <th scope="col-1">Basura del hombre</th>
+      <th scope="col-1">Basura por sargaso</th>
+      <th scope="col-1">Basura organica</th>
+      <th scope="col-1">Basura inorganica</th>
+      <th scope="col-1">Mucha basura</th>
+      <th scope="col-1">Poca basura</th>
+      <th scope="col-1">- de 50 persona por playa</th>
+      <th scope="col-1">- de 100 personas por playa</th>
+      <th scope="col-1">+ de 100 personas por playa</th>
     </tr>
   </thead>
   <tbody>
@@ -49,7 +75,13 @@
   </tbody>
 </table>
     </div>
-
+  </div>
 </body>
 </html>
+
+    
+    
+  
+
+
 @endsection

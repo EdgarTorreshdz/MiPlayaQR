@@ -1522,3 +1522,48 @@ font-weight: bold;
 #btn-l{
   width: 40%;
 }
+.admin1{
+  margin-top: 80px;
+}
+.menu-lateral{
+background: #23374d;
+}
+.menu-lateral nav li a{
+  text-decoration: none;
+  color: white;
+}
+.menu-lateral nav li{
+  list-style: none;
+  width: 100%;
+  padding-top: 50px;
+  float: left;
+  color: white;
+  line-height: 30px;
+}
+.menu-lateral nav li span{
+  font-size: 20px;
+}
+.menu-lateral nav{
+  text-align: center;
+}
+
+@media(max-width: 480px){
+  .menu-lateral nav li{
+    list-style: none;
+    width: 100%;
+    padding-top: 50px;
+    float: left;
+    color: white;
+    line-height: 10px;
+    font-size: 0px;
+  }
+  .menu-lateral nav li span{
+    font-size: 15px;
+  }
+  .table{
+    margin-left: 8px;
+  }
+}
+.table{
+  margin-left: 20px;
+}
