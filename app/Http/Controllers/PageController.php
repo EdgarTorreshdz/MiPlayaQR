@@ -41,7 +41,8 @@ class PageController extends Controller
             $playas->votospositivos=$playas->votospositivos+1;
         }
         $playas->save();
-        return back()->with('mensaje','Voto Realizado');
+        
+        return redirect()->route('realizado');
     }
     
     public function usuarios(){
@@ -60,7 +61,7 @@ class PageController extends Controller
         $playas = App\Playa::all();
         return view('welcome',compact('playas'));
     }
-
+    
     public function crear(Request $request){
         
         $request->validate([
@@ -83,37 +84,6 @@ class PageController extends Controller
         //return $request->all();
     }
 
-    /*public function editar(Request $request, $id){
-        $playasEditar = App\Playa::findOrFail($id);
-        $playasEditar->save();
-        return back()->with('mensaje','Playa editada');
-    }*/
-    /*public function eliminar($id){
-        $playasEliminar= App\Playa::findOrFail($id);
-        $playasEliminar->delete();
-        return back()->with('mensaje', 'Playa Eliminada');
-    }*/
-    /*public function crear(Request $request){
-        
-        $request->validate([
-            'nombre'=>'required|max:40',
-            'latitud'=>'required|max:10',
-            'longitud'=>'required|max:10',
-            'ubicacion'=>'required|max:40',
-
-        ]);
-
-        $playaNueva= new App\Playa;
-        $playaNueva->nombre = $request->nombre;
-        $playaNueva->imagen=$request->imagen;
-        $playaNueva->latitud=$request->latitud;
-        $playaNueva->longitud=$request->longitud;
-        $playaNueva->ubicacion = $request->ubicacion;
-        $playaNueva->save();
-        return back()->with('mensaje','Playa Creada');
-
-        //return $request->all();
-    }*/
 
     public function editar($id){
         $playasEditar = App\Playa::findOrFail($id);
@@ -178,6 +148,12 @@ class PageController extends Controller
             $encuesta->masCien = $encuesta->masCien + 1;
         }
         $encuesta->save();
-        return back()->with('mensaje','Voto Realizado');
+        return redirect()->route('encuestaRealizada');
+    }
+    public function realizado(){
+        return view('realizado');
+    }
+    public function encuestaRealizada(){
+        return view('encuestaRealizada');
     }
 }

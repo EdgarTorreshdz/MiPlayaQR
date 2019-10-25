@@ -11,9 +11,14 @@ route::group(['middleware'=>'usuarioStandard'],function()     {
     Route::get('/playas', 'PageController@playas')->name('playas');
     Route::get('/playas/{playa}', 'PageController@show')->name('playas.show');
     Route::get('/playas/{playa}/encuesta', 'PageController@encuesta')->name('playas.encuesta.encuesta');
+    Route::get('/realizado', 'PageController@realizado')->name('realizado');
+    Route::get('/encuestaRealizada', 'PageController@encuestaRealizada')->name('encuestaRealizada');
 
 });
 Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
+
+
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/denied', ['as' => 'denied', function() {
@@ -30,9 +35,13 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
     Route::get('/lista','PageController@listaPlaya')->name('lista');
     Route::get('/usuarios', 'PageController@Usuarios')->name('usuarios');
     Route::get('/votos','informacionController@infos')->name('votos');
+
+//CRUD PLAYAS
     Route::post('/', 'PageController@crear')->name('playas.crear');
     Route::delete('/eliminar/{id}', 'PageController@eliminar')->name('playas.eliminar');
     Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
+
+
 });
 
 
