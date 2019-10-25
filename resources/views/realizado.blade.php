@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card" id="card-login">
-                <div class="card-header" id="head-login">{{ __('voto Realizado') }}</div>
+                <div class="card-header" id="head-login">{{ __('¡Gracias por tu apoyo!') }}</div>
                 @if (session('status'))
                         return view('welcome');
                     @endif

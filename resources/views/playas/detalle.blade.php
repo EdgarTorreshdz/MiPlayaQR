@@ -43,7 +43,8 @@
         <nav class="navbar navbar-expand-md nav shadow-sm" style="height: auto;">
             <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="../../images/Logo.png" alt="" style="width:100px;">
+                <img src="../../images/2076984.png" alt="" style="width:50px;">
+                <p class="F-logo">MI PLAYAQR</p>
                 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -115,16 +116,16 @@
             <div class="container">
             <form class="row" action="/playas/{{$playa->id}}" method="post">
                 <div class="col">
-                    <input name="tipo" value="bueno" type="submit" class="btn btn-primary">
+                    <input name="tipo" value="Bueno" type="submit" class="btn btn-primary"style="float: right">
                 </div>
                 <div class="col">
-                    <input name="tipo" value="malo" type="submit" class="btn btn-danger" style="float: right">
+                    <input name="tipo" value="Malo" type="submit" class="btn btn-danger">
                 </div>
                 @csrf
             </form>
             </div>
             <div class="col">
-            <a class="btn btn-primary" href="/playas/{{$playa->id}}/encuesta" role="button" style="width: 100%; margin-rigth: 1px; margin-top: 10px;">Encuesta</a>
+            <a class="btn" href="/playas/{{$playa->id}}/encuesta" role="button" style="background:#007bff; color:white; heigt:15px;width: 100%;  margin-top: 10px;">Encuesta</a>
             </div>
         </div>
         </div>

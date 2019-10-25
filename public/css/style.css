@@ -1526,18 +1526,18 @@ font-weight: bold;
   margin-top: 80px;
 }
 .menu-lateral{
-background: #23374d;
+background: #e3e7f1;
 }
 .menu-lateral nav li a{
   text-decoration: none;
-  color: white;
+  color: #23374d;
 }
 .menu-lateral nav li{
   list-style: none;
   width: 100%;
   padding-top: 50px;
   float: left;
-  color: white;
+  color: #23374d;
   line-height: 30px;
 }
 .menu-lateral nav li span{
@@ -1553,7 +1553,7 @@ background: #23374d;
     width: 100%;
     padding-top: 50px;
     float: left;
-    color: white;
+    color: #23374d;
     line-height: 10px;
     font-size: 0px;
   }
