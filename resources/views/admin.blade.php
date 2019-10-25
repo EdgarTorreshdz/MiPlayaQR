@@ -40,40 +40,83 @@
           <h2 class="subscribe-title">Resultados de encuestas</h2>
           <p class="subscribe-text">Encuentra todas las playas de nuestro hermoso estado de Quintana Roo</p>
         </div>
-        <table class="table">
-  <thead class="thead-dark container">
-    <tr class="row">
-      <th scope="col-1">Basura del hombre</th>
-      <th scope="col-1">Basura por sargaso</th>
-      <th scope="col-1">Basura organica</th>
-      <th scope="col-1">Basura inorganica</th>
-      <th scope="col-1">Mucha basura</th>
-      <th scope="col-1">Poca basura</th>
-      <th scope="col-1">- de 50 persona por playa</th>
-      <th scope="col-1">- de 100 personas por playa</th>
-      <th scope="col-1">+ de 100 personas por playa</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($encuesta as $recorrido)
-    <tr>
-      <td>{{$recorrido->hombre}}</td>
+
+
+
+    <table class="table" id="indiv">
+      <thead class="thead-dark container">
+        <tr>
+        <th >Basura <br>generada por <br>el hombre</th>
+      <th >Basura <br>generada por <br>el sargaso</th>
+        </tr>
+      </thead>
+      <tbody>
+      @foreach($encuesta as $recorrido)
+        <tr>
+        <td>{{$recorrido->hombre}}</td>
       <td>{{$recorrido->sargazo}}</td>
-      <td>{{$recorrido->organica}}</td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+
+    <table class="table" id="indiv">
+      <thead class="thead-dark container">
+        <tr>
+        <th >Basura organica</th>
+      <th >Basura inorganica</th>
+        </tr>
+      </thead>
+      <tbody>
+      @foreach($encuesta as $recorrido)
+        <tr>
+        <td>{{$recorrido->organica}}</td>
       <td>{{$recorrido->inorganica}}</td>
-      <td>{{$recorrido->mucha}}</td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+
+    <table class="table" id="indiv">
+      <thead class="thead-dark container">
+        <tr>
+        <th >Mucha basura</th>
+      <th >Poca basura</th>
+        </tr>
+      </thead>
+      <tbody>
+      @foreach($encuesta as $recorrido)
+        <tr>
+        <td>{{$recorrido->mucha}}</td>
       <td>{{$recorrido->poca}}</td>
-      <td>{{$recorrido->menosCincuenta}}</td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+
+    <table class="table" id="indiv">
+      <thead class="thead-dark container">
+        <tr>
+        <th >- de 50 persona por playa</th>
+      <th >- de 100 personas por playa</th>
+      <th >+ de 100 personas por playa</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      @foreach($encuesta as $recorrido)
+        <tr>
+        <td>{{$recorrido->menosCincuenta}}</td>
       <td>{{$recorrido->menosCien}}</td>
       <td>{{$recorrido->masCien}}</td>
 
-      <td>
-      <!--a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a-->
-      </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+
+
+
     </div>
   </div>
 </body>
