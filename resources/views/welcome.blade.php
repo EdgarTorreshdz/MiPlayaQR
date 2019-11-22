@@ -42,7 +42,7 @@
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="images/2076984.png" alt="" style="width:50px;">
-                <p class="F-logo">MI PLAYAQR</p>
+                <p class="F-logo">MI PLAYAQR  hola como estas</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="icon-menu" style="color:white"></span>
