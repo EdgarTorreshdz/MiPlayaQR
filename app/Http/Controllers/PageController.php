@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
-
+use App\Playa;
 
 class PageController extends Controller
 {   
@@ -95,12 +95,25 @@ class PageController extends Controller
     public function editar($id){
         $playasEditar = App\Playa::findOrFail($id);
 
-       // $playasEditar->fill($id->all());
-        
-
-       
-        //$playasEditar->save();
         return view('editar',compact('playasEditar'));
+    
+    }
+    public function update(Request $request, $id){
+
+        $request->validate([
+            'nombre'=>'required',
+            'ubicacion'=> 'required',
+            'bandera' => 'required'
+          ]);
+    
+          $playaup = Playa::find($id);
+          $playaup->nombre= $request->get('nombre');
+          $playaup->ubicacion= $request->get('ubicacion');
+          $playaup->bandera= $request->get('bandera');
+          $playaup->save();
+            
+          return redirect('/lista')->with('success', 'Playa Actualizada!');
+
 
     }
     public function eliminar($id){

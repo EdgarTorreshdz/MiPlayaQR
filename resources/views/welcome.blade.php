@@ -75,15 +75,15 @@
                             @endif
                             @if(Auth::user()->permiso==2)
                             <li class="nav-item">
-                                <a class="nav-link badge" href="{{ route('playas') }}">{{ __('Playas') }}</a>
+                                <a class="nav-link " href="{{ route('playas') }}">{{ __('Playas') }}</a>
                             </li>
                             @endif
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle badge badge-primary text-wrap font-size-30" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item badge badge-primary text-wrap font-size-30" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
@@ -355,5 +355,9 @@ $("#ubicacion").css("display", "none");
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
+
+
+
+
 </body>
 </html>
