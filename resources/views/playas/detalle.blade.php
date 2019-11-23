@@ -112,7 +112,30 @@
         <img src="../img/delfines.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{$playa->nombre}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"><?php if(($playa->bandera)==1) {
+                echo 'Bandera Verde';
+
+            }else if(($playa->bandera)==2) {
+                echo 'Bandera Amarilla';
+
+            }else if(($playa->bandera)==3) {
+                echo 'Bandera Roja';
+
+            }else if(($playa->bandera)==4) {
+                echo 'Bandera Azul';
+
+            }else if(($playa->bandera)==5) {
+                echo 'Bandera Blanca';
+
+            }else if(($playa->bandera)==6) {
+                echo 'Bandera Negra';
+
+            }?>
+            
+            </p>
+            <p class="card-text">Estacionamiento: {{$playa->Estacionamiento}}</p>
+            <p class="card-text">Estado de la republica: {{$playa->ubicacion}}</p>
+            <p class="card-text">Evento actual: {{$playa->evento}}</p>
             <div class="container">
             <form class="row" action="/playas/{{$playa->id}}" method="post">
                 <div class="col">

@@ -18,8 +18,30 @@
       <h4 class="card-title text-center">Playa:  {{$recorrido->nombre}}</h4>
       <br>
       <a href="/playas/{{$recorrido->id}}"><img class="card-img-top" src="images/delfines.jpg" alt=""></a>
-      <p class="card-text" id="Ubi">Ubicación:</p>
-      <p>{{$recorrido->ubicacion}}</p>
+      <p class="card-text"><?php if(($recorrido->bandera)==1) {
+                echo 'Bandera Verde';
+
+            }else if(($recorrido->bandera)==2) {
+                echo 'Bandera Amarilla';
+
+            }else if(($recorrido->bandera)==3) {
+                echo 'Bandera Roja';
+
+            }else if(($recorrido->bandera)==4) {
+                echo 'Bandera Azul';
+
+            }else if(($recorrido->bandera)==5) {
+                echo 'Bandera Blanca';
+
+            }else if(($recorrido->bandera)==6) {
+                echo 'Bandera Negra';
+
+            }?>
+            
+            </p>
+            <p class="card-text">Estacionamiento: {{$recorrido->Estacionamiento}}</p>
+            <p class="card-text">Estado de la republica: {{$recorrido->ubicacion}}</p>
+            <p class="card-text">Evento actual: {{$recorrido->evento}}</p>
     </div>
   </div>
     @endforeach

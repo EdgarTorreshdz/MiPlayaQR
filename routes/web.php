@@ -22,7 +22,7 @@ Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/denied', ['as' => 'denied', function() {
-    return view('admin');
+    return redirect()->route('welcome');
 }]);
 Route::get('/', 'PageController@welcome')->name('welcome');
 
