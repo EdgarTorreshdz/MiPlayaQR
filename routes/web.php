@@ -49,6 +49,3 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
 Route::post('/encuestaok/{id}', 'PageController@encuestaupdate')->name('encuesta');
 
 
-Route::get('qrcode', function () {
-    return QrCode::size(300)->generate('http://miplayaqr.zonakb.com/');
-});

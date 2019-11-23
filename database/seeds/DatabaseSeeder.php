@@ -46,7 +46,8 @@ class DatabaseSeeder extends Seeder
         $Playa->latitud=$latitud;
         $Playa->longitud=$longitud;
         $Playa->ubicacion=$ubicacion;
+        
         $Playa->save();
-
+        
     }
 }
