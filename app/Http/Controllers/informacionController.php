@@ -8,7 +8,7 @@ use App;
 class informacionController extends Controller
 {
     public function infos(){
-        $information = App\informacionPlayas::all();
+        $information = App\informacionPlayas::with('playa')->get();;
         return view('info',compact('information'));
     }
     public function crear(Request $request){
