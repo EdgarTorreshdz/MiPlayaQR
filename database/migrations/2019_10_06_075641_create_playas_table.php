@@ -21,6 +21,8 @@ class CreatePlayasTable extends Migration
             $table->double('latitud', 10,8);
             $table->double('longitud', 10,8);
             $table->string('ubicacion',300);
+            $table->string('bandera');
+            $table->string('evento');
             $table->timestamps();
         });
     }

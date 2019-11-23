@@ -15,7 +15,7 @@ class CreateBanderasTable extends Migration
     {
         Schema::create('banderas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Tipo de bandera');
+            $table->string('bandera');
             $table->string('Evento');
             $table->timestamps();
         });

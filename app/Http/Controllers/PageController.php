@@ -68,6 +68,8 @@ class PageController extends Controller
             'nombre'=>'required|max:40',
             'latitud'=>'required|max:10',
             'longitud'=>'required|max:10',
+            'bandera'=>'required',
+            'evento'=>'required',
             'ubicacion'=>'required|max:40',
 
         ]);
@@ -77,7 +79,10 @@ class PageController extends Controller
         $playaNueva->imagen=$request->imagen;
         $playaNueva->latitud=$request->latitud;
         $playaNueva->longitud=$request->longitud;
+        $playaNueva->bandera = $request->bandera;
+        $playaNueva->evento = $request->evento;
         $playaNueva->ubicacion = $request->ubicacion;
+        
         $playaNueva->save();
         return back()->with('mensaje','Playa Creada');
 

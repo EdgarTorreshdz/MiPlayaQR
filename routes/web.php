@@ -5,9 +5,9 @@ use App\Http\Controllers\PageController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 //Rutas de usuario standard
-route::group(['middleware'=>'usuarioStandard'],function()     {
+route::group(['middleware'=>'usuarioStandard'],function(){
     //Route::get('login','LoginController@showLoginForm')->name('login');
-    Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
+    Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');       
     Route::get('/playas', 'PageController@playas')->name('playas');
     Route::get('/playas/{playa}', 'PageController@show')->name('playas.show');
     Route::get('/playas/{playa}/encuesta', 'PageController@encuesta')->name('playas.encuesta.encuesta');

@@ -46,8 +46,9 @@
       <input type="text" name="imagen" placeholder="Imagen" value="1" disabled>
       <input type="number" step="any" name="latitud"  placeholder="Latitud" class="form-control mb-2">
       <input type="number" step="any" name="longitud" placeholder="Longitud" class="form-control mb-2">
+      <input type="text" name="bandera" placeholder="Bandera" class="form-control mb-2">
+      <input type="text" name="evento" placeholder="Evento" class="form-control mb-2">
       <input type="text" name="ubicacion" placeholder="Estado" class="form-control mb-2">
-
       <button class="btn btn-primary btn-block" type="submit">Agregar</button>
     </form>
 
@@ -63,6 +64,7 @@
       <th scope="col">Id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Estado</th>
+      <th scope="col"> Bandera</th>
       <th scope="col"> acciones</th>
     </tr>
   </thead>
@@ -72,6 +74,7 @@
       <th scope="row">{{$recorrido->id}}</th>
       <td>{{$recorrido->nombre}}</td>
       <td>{{$recorrido->ubicacion}}</td>
+      <td>{{$recorrido->bandera}}</td>
       <td>
       <!--a href="{{ route('playas.editar', $recorrido->id)}}" class="btn btn-warning btn-sm">Editar</a-->
 
