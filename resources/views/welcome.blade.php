@@ -266,16 +266,55 @@ $("#ubicacion").css("display", "none");
         });
 
         if(props.nombre){
-          var nombre = props.nombre;
-          console.log(nombre);
-          var contentString = 
+          var nombre = props.bandera;
+          if(nombre==1){
+            var contentString = 
           '<div id="content">'+
           '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice">'+nombre+'<br>'+props.bandera+'<br>'
+            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/palmera.png" alt=""> <br>'
             +props.estacionamiento+'<br>'+
             props.evento+
             '</div>'+
           '</div>';
+          }else if(nombre==2){
+            var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+'</h6>'+
+            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
+            +props.estacionamiento+'<br>'+
+            props.evento+
+            '</div>'+
+          '</div>';
+          }else if(nombre==3){
+            var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+'</h6>'+
+            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
+            +props.estacionamiento+'<br>'+
+            props.evento+
+            '</div>'+
+          '</div>';
+          }else if(nombre==4){
+            var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+'</h6>'+
+            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
+            +props.estacionamiento+'<br>'+
+            props.evento+
+            '</div>'+
+          '</div>';
+          }else{
+            var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+'</h6>'+
+            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
+            +props.estacionamiento+'<br>'+
+            props.evento+
+            '</div>'+
+          '</div>';
+          }
+          
+          
 
           var infoWindow = new google.maps.InfoWindow({
             
