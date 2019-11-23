@@ -270,47 +270,51 @@ $("#ubicacion").css("display", "none");
           if(nombre==1){
             var contentString = 
           '<div id="content">'+
-          '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/palmera.png" alt=""> <br>'
-            +props.estacionamiento+'<br>'+
+          '<h6>'+props.nombre+' <img src="images/banV.png" alt=""></h6>'+
+            props.estacionamiento+'<br>'+
             props.evento+
             '</div>'+
           '</div>';
           }else if(nombre==2){
             var contentString = 
           '<div id="content">'+
-          '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
-            +props.estacionamiento+'<br>'+
+          '<h6>'+props.nombre+' <img src="images/banA.png" alt=""></h6>'+
+            props.estacionamiento+'<br>'+
             props.evento+
             '</div>'+
           '</div>';
           }else if(nombre==3){
             var contentString = 
           '<div id="content">'+
-          '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
-            +props.estacionamiento+'<br>'+
+          '<h6>'+props.nombre+' <img src="images/banR.png" alt=""> </h6>'+
+            props.estacionamiento+'<br>'+
             props.evento+
             '</div>'+
           '</div>';
           }else if(nombre==4){
             var contentString = 
           '<div id="content">'+
-          '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
-            +props.estacionamiento+'<br>'+
+          '<h6>'+props.nombre+' <img src="images/banAz.png" alt=""> </h6>'+
+            props.estacionamiento+'<br>'+
             props.evento+
             '</div>'+
+          '</div>';
+          }else if(nombre==5){
+            var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+' <img src="images/banB.png" alt=""></h6>'+
+            props.estacionamiento+'<br>'+
+            props.evento+
+            
           '</div>';
           }else{
             var contentString = 
           '<div id="content">'+
-          '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice"><br>'+props.bandera+'<img src="images/gps.png" alt=""> <br>'
+          '<h6>'+props.nombre+' <img src="images/banN.png" alt=""> </h6>'+
+            
             +props.estacionamiento+'<br>'+
             props.evento+
-            '</div>'+
+            
           '</div>';
           }
           
