@@ -128,7 +128,7 @@
             <a class="btn" href="/playas/{{$playa->id}}/encuesta" role="button" style="background:#007bff; color:white; heigt:15px;width: 100%;  margin-top: 10px;">Encuesta</a>
             </div>
             <div>
-            {!! QrCode::size(100)->generate('http://127.0.0.1:8000/playas/'.$playa->id); !!}
+            {!! QrCode::size(400)->generate('http://localhost:8000/playas/'.$playa->id); !!}
             </div>
         </div>
         </div>
