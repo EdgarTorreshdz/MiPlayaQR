@@ -27,9 +27,9 @@
         </div>
         <nav>
             <li>
-            <a href="/admin"><span class="icon-home"></span>
+            <a href="/admin"><span class="icon-file-text"></span>
                 <br>
-                Home</a>
+                Encuetas</a>
             </li>
             <li>
             <a href="/usuarios"><span class="icon-users"></span>
@@ -42,9 +42,9 @@
                 Playas</a>
             </li>
             <li>
-            <a href="votos"><span class="icon-file-text"></span>
+            <a href="votos"><span class="icon-pencil"></span>
                 <br>
-                Encuestas</a>
+                Votos</a>
             </li>
         </nav>
     </div>

@@ -58,13 +58,18 @@ class PageController extends Controller
     }
 
     public function welcome(){
-        $playas = App\Playa::all();
+        $playas = App\informacionPlayas::with('playa')->orderBy('votospositivos','desc')->get();
+        if(count($playas)){
+            for($i = 0;$i<3 && $i < count($playas);$i++){
+                $playas[$i]->playa->edgar=1;
+            }
+        }
         return view('welcome',compact('playas'));
     }
     
     public function topPlayas(){
-        $playas = App\Playa::all();
-        return view('topPlayas',compact('playas'));
+        $encuesta = App\informacionPlayas::with('playa')->orderBy('votospositivos','desc')->limit(3)->get();
+        return view('topPlayas',compact('encuesta'));
     }
     public function crear(Request $request){
         

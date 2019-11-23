@@ -77,6 +77,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('playas') }}">{{ __('Playas') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge" href="{{ route('topPlayas') }}">{{ __('Top playas') }}</a>
+                            </li>
                             @endif
                             
                             @if(Auth::user()->permiso==1)

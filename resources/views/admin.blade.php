@@ -7,9 +7,9 @@
         <nav>
             <li>
               <br>
-            <a href="/admin"><span class="icon-home"></span>
+            <a href="/admin"><span class="icon-file-text"></span>
                 <br>
-                Home</a>
+                Encuestas</a>
             </li>
             <li>
               <br>
@@ -25,9 +25,9 @@
             </li>
             <li>
               <br>
-            <a href="votos"><span class="icon-file-text"></span>
+            <a href="votos"><span class="icon-pencil"></span>
                 <br>
-                Encuestas</a>
+                Votos</a>
             </li>
             <li>
                 

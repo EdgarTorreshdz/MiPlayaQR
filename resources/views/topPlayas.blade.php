@@ -12,40 +12,45 @@
   </section>
 
 <div clas="caja">
-@foreach($playas as $recorrido)
+<!--{{$encuesta}}-->
+
+<div clas="caja">
+@foreach($encuesta as $recorrido)
   <div id="carta" class="card mb-3">
     <div class="card-body">
-      <h4 class="card-title text-center">Playa:  {{$recorrido->nombre}}</h4>
+      <h4 class="card-title text-center">Playa:  {{$recorrido->playa->nombre}}</h4>
       <br>
       <a href="/playas/{{$recorrido->id}}"><img class="card-img-top" src="images/delfines.jpg" alt=""></a>
-      <p class="card-text"><?php if(($recorrido->bandera)==1) {
-                echo 'Bandera Verde';
+      <p class="card-text"><?php if(($recorrido->playa->bandera)==1) {
+                echo '<img src="images/banV.png" alt="">';
+            }else if(($recorrido->playa->bandera)==2) {
+              echo '<img src="images/banA.png" alt="">';
 
-            }else if(($recorrido->bandera)==2) {
-                echo 'Bandera Amarilla';
+            }else if(($recorrido->playa->bandera)==3) {
+              echo '<img src="images/banR.png" alt="">';
 
-            }else if(($recorrido->bandera)==3) {
-                echo 'Bandera Roja';
-
-            }else if(($recorrido->bandera)==4) {
-                echo 'Bandera Azul';
-
-            }else if(($recorrido->bandera)==5) {
-                echo 'Bandera Blanca';
-
-            }else if(($recorrido->bandera)==6) {
-                echo 'Bandera Negra';
+            }else if(($recorrido->playa->bandera)==4) {
+              echo '<img src="images/banAz.png" alt="">';
+            }else if(($recorrido->playa->bandera)==5) {
+              echo '<img src="images/banB.png" alt="">';
+            }else if(($recorrido->playa->bandera)==6) {
+                echo '<img src="images/banN" alt="">';
 
             }?>
             
             </p>
-            <p class="card-text">Estacionamiento: {{$recorrido->Estacionamiento}}</p>
-            <p class="card-text">Estado de la republica: {{$recorrido->ubicacion}}</p>
-            <p class="card-text">Evento actual: {{$recorrido->evento}}</p>
+            <p class="card-text">Estacionamiento: {{$recorrido->playa->estacionamiento}}</p>
+            <p class="card-text">Estado de la republica: {{$recorrido->playa->ubicacion}}</p>
+            <p class="card-text">Evento actual: {{$recorrido->playa->evento}}</p>
+            <p class="card-text">Votos positivos: {{$recorrido->votospositivos}}</p>
+            <p class="card-text">Votos negativos {{$recorrido->votosnegativos}}</p>
+
+
     </div>
   </div>
     @endforeach
   </div>
+  
   <footer class="site-footer">
       <div class="container">
         <div class="row">

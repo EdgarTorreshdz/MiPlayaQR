@@ -249,7 +249,7 @@ $("#ubicacion").css("display", "none");
 
                 for(var i = 0;i < markers.length;i++){
         // Add marker
-        addMarker(markers[i]);
+        addMarker(markers[i].playa);
         
       }
       // Add Marker Function
@@ -319,7 +319,7 @@ $("#ubicacion").css("display", "none");
             '</div>'+
           '</div>';
           }
-          
+          contentString+=props.edgar==1?' Xido':' No Xido';
           
 
           var infoWindow = new google.maps.InfoWindow({
