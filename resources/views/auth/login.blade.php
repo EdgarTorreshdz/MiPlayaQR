@@ -2,6 +2,16 @@
 
 @section('content')
 
+
+<style>
+
+body{
+    background-image: url("images/ocean.gif");
+    background-size: cover;
+ background-color: #cccccc;
+}
+
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">

@@ -94,6 +94,12 @@ class PageController extends Controller
 
     public function editar($id){
         $playasEditar = App\Playa::findOrFail($id);
+
+       // $playasEditar->fill($id->all());
+        
+
+       
+        //$playasEditar->save();
         return view('editar',compact('playasEditar'));
 
     }
