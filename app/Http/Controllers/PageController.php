@@ -62,6 +62,10 @@ class PageController extends Controller
         return view('welcome',compact('playas'));
     }
     
+    public function topPlayas(){
+        $playas = App\Playa::all();
+        return view('topPlayas',compact('playas'));
+    }
     public function crear(Request $request){
         
         $request->validate([

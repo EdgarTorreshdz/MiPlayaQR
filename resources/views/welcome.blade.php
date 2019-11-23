@@ -77,6 +77,9 @@
                             <li class="nav-item">
                                 <a class="nav-link badge" href="{{ route('playas') }}">{{ __('Playas') }}</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link badge" href="{{ route('topPlayas') }}">{{ __('Top playas') }}</a>
+                            </li>
                             @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle badge badge-primary text-wrap font-size-30" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

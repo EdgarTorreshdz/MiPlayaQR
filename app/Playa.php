@@ -8,4 +8,6 @@ class Playa extends Model
 {
     //
     protected $table='playas';
+
+    
 }

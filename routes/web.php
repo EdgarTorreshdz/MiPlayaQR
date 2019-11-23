@@ -13,6 +13,7 @@ route::group(['middleware'=>'usuarioStandard'],function(){
     Route::get('/playas/{playa}/encuesta', 'PageController@encuesta')->name('playas.encuesta.encuesta');
     Route::get('/realizado', 'PageController@realizado')->name('realizado');
     Route::get('/encuestaRealizada', 'PageController@encuestaRealizada')->name('encuestaRealizada');
+    Route::get('/topPlayas', 'PageController@topPlayas')->name('topPlayas');
 
 });
 Route::post('/playas/{playa}', 'PageController@votar')->name('playas.votar');
