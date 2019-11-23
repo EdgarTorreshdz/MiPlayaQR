@@ -42,7 +42,7 @@
             <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="images/2076984.png" alt="" style="width:50px;">
-                <p class="F-logo">MI PLAYAQR intento de merge</p>
+                <p class="F-logo">MI PLAYAQR</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="icon-menu" style="color:white"></span>
@@ -274,8 +274,16 @@ $("#ubicacion").css("display", "none");
         });
 
         if(props.nombre){
+          var contentString = 
+          '<div id="content">'+
+          '<h6>'+props.nombre+'</h6>'+
+            '<div id="siteNotice">'+props.nombre+'<br>'+props.bandera+
+            '</div>'+
+          '</div>';
+
           var infoWindow = new google.maps.InfoWindow({
-            content:props.nombre
+            
+            content:contentString
           });infoWindow.open(map, marker);
 
           marker.addListener('click', function(){
