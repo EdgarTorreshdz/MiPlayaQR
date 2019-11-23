@@ -46,13 +46,15 @@
     <table class="table" id="indiv">
       <thead class="thead-dark container">
         <tr>
+        <th>nombre de la playa</th>
         <th >Basura <br>generada por <br>el hombre</th>
       <th >Basura <br>generada por <br>el sargaso</th>
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta ?? '' as $recorrido)
+      @foreach($encuesta as $recorrido)
         <tr>
+        <td>{{$recorrido->playa->nombre}}</td>
         <td>{{$recorrido->hombre}}</td>
       <td>{{$recorrido->sargazo}}</td>
         </tr>
@@ -63,13 +65,15 @@
     <table class="table" id="indiv">
       <thead class="thead-dark container">
         <tr>
+        <th>nombre de la playa</th>
         <th >Basura organica</th>
       <th >Basura inorganica</th>
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta ?? '' as $recorrido)
+      @foreach($encuesta as $recorrido)
         <tr>
+        <td>{{$recorrido->playa->nombre}}</td>
         <td>{{$recorrido->organica}}</td>
       <td>{{$recorrido->inorganica}}</td>
         </tr>
@@ -80,13 +84,15 @@
     <table class="table" id="indiv">
       <thead class="thead-dark container">
         <tr>
+        <th>nombre de la playa</th>
         <th >Mucha basura</th>
       <th >Poca basura</th>
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta ?? '' as $recorrido)
+      @foreach($encuesta as $recorrido)
         <tr>
+        <td>{{$recorrido->playa->nombre}}</td>
         <td>{{$recorrido->mucha}}</td>
       <td>{{$recorrido->poca}}</td>
         </tr>
@@ -97,6 +103,7 @@
     <table class="table" id="indiv">
       <thead class="thead-dark container">
         <tr>
+        <th>nombre de la playa</th>
         <th >- de 50 persona por playa</th>
       <th >- de 100 personas por playa</th>
       <th >+ de 100 personas por playa</th>
@@ -104,8 +111,9 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($encuesta ?? '' as $recorrido)
+      @foreach($encuesta as $recorrido)
         <tr>
+        <td>{{$recorrido->playa->nombre}}</td>
         <td>{{$recorrido->menosCincuenta}}</td>
       <td>{{$recorrido->menosCien}}</td>
       <td>{{$recorrido->masCien}}</td>

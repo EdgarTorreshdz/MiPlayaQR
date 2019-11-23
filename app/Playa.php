@@ -9,5 +9,9 @@ class Playa extends Model
     //
     protected $table='playas';
 
+    public function encuestas()
+    {
+        return $this->hasMany('App\Encuesta');
+    }
     
 }

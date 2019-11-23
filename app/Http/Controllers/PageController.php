@@ -52,7 +52,7 @@ class PageController extends Controller
 
     public function admin(){
         //$usuarios = App\User::all();
-        $encuesta = App\Encuesta::all();
+        $encuesta = App\Encuesta::with('playa')->get();
         return view('admin',compact('encuesta'));
 
     }

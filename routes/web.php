@@ -43,7 +43,6 @@ route::group(['middleware'=>'usuarioAdmin'],function(){
     Route::get('/editar/{id}', 'PageController@editar')->name('playas.editar');
     Route::put('/editar/{id}','PageController@update')->name('playas.update');
 
-
 });
 
 
