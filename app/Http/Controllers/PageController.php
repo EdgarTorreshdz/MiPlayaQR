@@ -70,6 +70,7 @@ class PageController extends Controller
             'longitud'=>'required|max:10',
             'bandera'=>'required',
             'evento'=>'required',
+            'estacionamiento'=>'required',
             'ubicacion'=>'required|max:40',
 
         ]);
@@ -81,6 +82,7 @@ class PageController extends Controller
         $playaNueva->longitud=$request->longitud;
         $playaNueva->bandera = $request->bandera;
         $playaNueva->evento = $request->evento;
+        $playaNueva->estacionamiento = $request->estacionamiento;
         $playaNueva->ubicacion = $request->ubicacion;
         
         $playaNueva->save();
