@@ -163,7 +163,7 @@
             </div>
           </div>
 
-          <div class="owl-carousel owl-all mb-5">
+          <div class="owl-carousel owl-all mb-5" style="padding-left: 20%">
             <div class="block-team-member-1 text-center rounded h-100">
               <figure>
                 <img src="images/edgar.jpg" alt="Image" class="img-fluid rounded-circle">
@@ -179,17 +179,9 @@
               </figure>
               <h3 class="font-size-20 text-black">Ricardo</h3>
               <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador de back.</span>
-              <a href="https://www.facebook.com/profile.php?id=100013508238804" style="color: black;">Facebook</a>  
-            </div>
-
-            <div class="block-team-member-1 text-center rounded h-100">
-              <figure>
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
-              </figure>
-              <h3 class="font-size-20 text-black">Jose Ángel Uc</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Desarrollador de front.</span>
               <a href="https://www.facebook.com/RicarcasCruz" style="color: black;">Facebook</a>  
             </div>
+
         </div>
       </div>
       </div>
@@ -274,10 +266,14 @@ $("#ubicacion").css("display", "none");
         });
 
         if(props.nombre){
+          var nombre = props.nombre;
+          console.log(nombre);
           var contentString = 
           '<div id="content">'+
           '<h6>'+props.nombre+'</h6>'+
-            '<div id="siteNotice">'+props.nombre+'<br>'+props.bandera+
+            '<div id="siteNotice">'+nombre+'<br>'+props.bandera+'<br>'
+            +props.estacionamiento+'<br>'+
+            props.evento+
             '</div>'+
           '</div>';
 
